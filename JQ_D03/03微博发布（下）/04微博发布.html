@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            list-style: none;
+        }
+        .box{
+            width: 600px;
+            border: 1px solid #ccc;
+            margin: 100px auto 0;
+            padding: 10px;
+        }
+        textarea{
+            width: 598px;
+            height: 140px;
+            border: 1px solid #ccc;
+            outline: none;
+            resize: none;
+        }
+        #btn{
+            width: 80px;
+            height: 30px;
+            margin: 5px 0;
+            background-color: #FFA500;
+            color: #fff;
+            text-align: center;
+            line-height: 30px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+        .list li{
+            line-height: 35px;
+            border-bottom: 1px dashed #ccc;
+            /*强制换行*/
+            word-break: break-all; 
+            word-wrap: break-word;
+        }
+    </style>
+    <script type="text/javascript" src="jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            
+            var oText=$('#myText');
+            var oBtn=$('#btn');
+            var oList=$('.list');
+
+            //控制文本域边框颜色 
+            oText.focus(function(event) {
+
+                $(this).css('border-color', '#FFA500');
+
+            }).blur(function(event) {
+
+                $(this).css('border-color', '#ccc');
+
+            });
+
+            //单击“发布”
+            oBtn.click(function(event) {
+               
+                //判断用户输入的值
+                var s=oText.val();
+
+                //如果值是空，警告用户
+                //否则，就执行插入
+                if(s==''){
+
+                    alert('输入不能为空！！');
+
+                }else{
+
+                    //实际上，就是在UL内部的最前面新增一个LI
+                    // prepend
+                    // LI里面的内容 应该是 用户输入的文字
+                    // s --> 死值
+                    var myLi='<li>'+s+'</li>';
+                    oList.prepend(myLi);
+
+                    //让新增的LI，执行slideDown动画
+                    //如何得到新增的LI？    实际上，就是UL里面的第0个LI
+                    var newLi=$('.list li:first');
+                    //slideDown只能针对隐藏的元素使用，而新增的LI一定是显示的；
+                    //所以先一瞬间让元素隐藏，再执行slideDown
+                    newLi.hide().slideDown();
+
+                    //刷新完微博以后，要将文本域清空
+                    oText.val('');
+
+                }
+
+
+
+            });
+
+
+        });
+    </script>
+</head>
+<body>
+    
+    <div class="box">
+        
+        <textarea id="myText"></textarea>
+        <div id="btn">发布</div>
+        <ul class="list">
+            <li>快来收了这九款用上就停不下来的应用吧！！</li>
+            <li>超级详细的云南大理自助游攻略。</li>
+            <li>外国最近很火的舞蹈，舒服简单自然，太棒了！</li>
+        </ul>
+
+    </div>
+
+
+</body>
+</html>

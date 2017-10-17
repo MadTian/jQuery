@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            list-style: none;
+        }
+        .box{
+            width: 300px;
+            height: 250px;
+            margin: 100px auto 0;
+            border: 1px solid pink;
+        }
+        .leftList,.rightList{
+            width: 49px;
+            height: 250px;
+            float: left;
+        }
+        .leftList li,.rightList li{
+            height: 27px;
+            border-bottom: 1px solid pink;
+        }
+        .leftList li a,.rightList li a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 27px;
+            text-decoration: none;
+            color: #333;
+            font-size: 12px;
+        }
+        .leftList li a:hover,.rightList li a:hover{
+            background: url(images/abg.gif);
+            color: #fff;
+        }
+        .centerList{
+            float: left;
+            width: 200px;
+            height: 250px;
+            border-left: 1px solid pink;
+            border-right: 1px solid pink;
+        }
+        .centerList li{
+            display: none;
+        }
+    </style>
+    <script type="text/javascript" src="jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            
+            //jq reset
+            $('.centerList li:first').show();
+            $('.leftList li:last,.rightList li:last').css('border-bottom', 'none');
+            
+            //鼠标放置到哪个类目下，就让与该类目相匹配的图片显示
+            
+            //1.得到类目
+            var leftListLi=$('.leftList li');
+            var rightListLi=$('.rightList li');
+            //2.得到所有的图片
+            var centerLi=$('.centerList li');
+
+            leftListLi.mouseenter(function(event) {
+                
+                //找与当前类目相匹配的图片
+                
+                //当前类目：$(this)
+                //找当前图片：需要一个有规律序号
+                
+                //使用index()去寻找当前这个序号
+                var i=$(this).index();
+                //该案例需要添加排他
+                //1.控制自己
+                //通过序号去图片数组中，寻找当前那张图片，让它显示
+                centerLi.eq(i).show();
+                //2.还原我的小伙伴们
+                //通过当前图片，找到它的前后所有同级图片，让它们隐藏
+                centerLi.eq(i).siblings('li').hide();
+
+
+            });
+
+            rightListLi.mouseenter(function(event) {
+                
+            
+                var i=$(this).index()+9;
+                centerLi.eq(i).show();
+                centerLi.eq(i).siblings('li').hide();
+
+
+            });
+
+
+
+        });
+    </script>
+</head>
+<body>
+    
+    <div class="box">
+        <ul class="leftList">
+            <li><a href="javascript:;">女靴</a></li>
+            <li><a href="javascript:;">雪地靴</a></li>
+            <li><a href="javascript:;">冬裙</a></li>
+            <li><a href="javascript:;">呢大衣</a></li>
+            <li><a href="javascript:;">毛衣</a></li>
+            <li><a href="javascript:;">棉服</a></li>
+            <li><a href="javascript:;">女裤</a></li>
+            <li><a href="javascript:;">羽绒服</a></li>
+            <li><a href="javascript:;">牛仔裤</a></li>
+        </ul>
+        <ul class="centerList">
+            <li>
+                <a href="javascript:;"><img src="images/女靴.jpg" width="200" height="250"  /></a>
+            </li>
+            <li><a href="javascript:;"><img src="images/雪地靴.jpg" width="200" height="250"/></a></li>
+            <li><a href="javascript:;"><img src="images/冬裙.jpg" width="200" height="250"  /></a></li>
+            <li><a href="javascript:;"><img src="images/呢大衣.jpg" width="200" height="250"/></a></li>
+            <li><a href="javascript:;"><img src="images/毛衣.jpg" width="200" height="250"  /></a></li>
+            <li><a href="javascript:;"><img src="images/棉服.jpg" width="200" height="250"  /></a></li>
+            <li><a href="javascript:;"><img src="images/女裤.jpg" width="200" height="250"  /></a></li>
+            <li><a href="javascript:;"><img src="images/羽绒服.jpg" width="200" height="250"/></a></li>
+            <li><a href="javascript:;"><img src="images/牛仔裤.jpg" width="200" height="250"/></a></li>
+            <li><a href="javascript:;"><img src="images/女包.jpg" width="200" height="250"  /></a></li>
+            <li><a href="javascript:;"><img src="images/男包.jpg" width="200" height="250"  /></a></li>
+            <li><a href="javascript:;"><img src="images/登山鞋.jpg" width="200" height="250"/></a></li>
+            <li><a href="javascript:;"><img src="images/皮带.jpg" width="200" height="250"  /></a></li>
+            <li><a href="javascript:;"><img src="images/围巾.jpg" width="200" height="250"  /></a></li>
+            <li><a href="javascript:;"><img src="images/皮衣.jpg" width="200" height="250"  /></a></li>
+            <li><a href="javascript:;"><img src="images/男毛衣.jpg" width="200" height="250"/></a></li>
+            <li><a href="javascript:;"><img src="images/男棉服.jpg" width="200" height="250"/></a></li>
+            <li><a href="javascript:;"><img src="images/男靴.jpg" width="200" height="250" / ></a></li>
+        </ul>
+        <ul class="rightList">
+            <li><a href="javascript:;">女包</a></li>
+            <li><a href="javascript:;">男包</a></li>
+            <li><a href="javascript:;">登山鞋</a></li>
+            <li><a href="javascript:;">皮带</a></li>
+            <li><a href="javascript:;">围巾</a></li>
+            <li><a href="javascript:;">皮衣</a></li>
+            <li><a href="javascript:;">男毛衣</a></li>
+            <li><a href="javascript:;">男棉服</a></li>
+            <li><a href="javascript:;">男靴</a></li>
+        </ul>
+    </div>
+
+
+</body>
+</html>

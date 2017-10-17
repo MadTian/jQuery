@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            list-style: none;
+        }
+        .banner{
+            width: 992px;
+            height: 420px;
+            margin: 100px auto 0;
+            position: relative;
+        }
+        .imgList{
+            width: 992px;
+            height: 420px;
+            position: relative;
+        }
+        .imgList li{
+            width: 992px;
+            height: 420px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+        .banner:hover .prevBtn,.banner:hover .nextBtn{
+            display: block;
+        }
+        .prevBtn,.nextBtn{
+            width: 40px;
+            height: 70px;
+            background: rgba(0, 0, 0, 0.5) url(images/xiaomi/left.gif) center center no-repeat;
+            position: absolute;
+            top: 50%;
+            margin-top: -35px;
+            cursor: pointer;
+            display: none;
+        }
+        .prevBtn{
+            left: 0;
+        }
+        .nextBtn{
+            right: 0;
+            background-image: url(images/xiaomi/right.gif);
+        }
+        .btnList{
+            width: 200px;
+            height: 22px;
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+        .btnList li{
+            width: 30px;
+            height: 20px;
+            float: left;
+            border: 1px solid #fff;
+            margin-right: 10px;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.3);
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+        .btnList li.current{
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    </style>
+    <script type="text/javascript" src="jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            
+            var timer;
+
+            //jq reset
+            $('.imgList li:first').show();
+            $('.btnList li:last').css('margin-right', 0);
+
+            var oNextBtn=$('.nextBtn');
+            var oPrevBtn=$('.prevBtn');
+            var oBanner=$('.banner');
+            //设置一个变量，用来模拟下一个标识
+            var num=0;
+
+            var aBtn=$('.btnList li');
+            var aImg=$('.imgList li');
+
+            //封装“下一张”功能
+            function nextFn(event) {
+                
+                //按钮切换
+                //需要一个标识去代表下一个..
+                //下一个标识是有规律的：1 2 3 4 0 1 2 3 4....
+                
+                //下一张切换时，将标识进行递增
+                num++;
+                if(num>4){
+                    num=0;
+                }
+                // num在控制完毕后，就代表下一个
+
+                //让下一个按钮具备 current，同时做排他，让其他按钮移除current
+                aBtn.eq(num).addClass('current').siblings('li').removeClass('current');
+
+                //图片切换
+                //让下一张图片淡入，同时做排他，让其他图片淡出
+                aImg.eq(num).stop().fadeIn().siblings('li').stop().fadeOut();
+
+
+            }
+
+            //banner功能分成两个板块：手动和自动
+            
+            //手动里面：按钮切换 和 图片切换
+            
+            //自动切换：说白了，就是每隔一段时间，做下一张切换
+            timer=setInterval(nextFn, 2000);
+
+            //停止和重启定时器
+            oBanner.hover(function() {
+                clearInterval(timer);
+            }, function() {
+                // 重启定时器，但是重启一定要先清空旧的
+                clearInterval(timer);
+                timer=setInterval(nextFn, 2000);
+            });
+
+
+            //下一张切换
+            oNextBtn.click(nextFn);
+
+            //上一张切换
+            oPrevBtn.click(function(event) {
+                
+                //按钮切换
+                //需要一个标识去代表上一个..
+                //上一个标识是有规律的：0 4 3 2 1 0 4 3 2 1 0...
+                
+                //上一张切换时，将标识进行递减
+                num--;
+                if(num<0){
+                    num=4;
+                }
+                // num在控制完毕后，就代表上一个
+
+                //让上一个按钮具备 current，同时做排他，让其他按钮移除current
+                aBtn.eq(num).addClass('current').siblings('li').removeClass('current');
+
+                //图片切换
+                //让上一张图片淡入，同时做排他，让其他图片淡出
+                aImg.eq(num).stop().fadeIn().siblings('li').stop().fadeOut();
+
+            });
+
+            //小点点击
+            aBtn.click(function(event) {
+                
+                //让当前角标具备current，同时做排他
+                $(this).addClass('current').siblings('li').removeClass('current');
+
+                //让当前页面上残留的图片淡出，让与当前角标匹配的图片淡入
+                //“辞旧迎新”
+
+                //1.先“辞旧”
+                // 让当前页面上残留的图片淡出
+                // 内存中的num就指向“旧人”
+                aImg.eq(num).stop().fadeOut();
+
+                //2.再“迎新”
+                //让与当前角标匹配的图片淡入
+                //要先获取当前的序号
+                var i=$(this).index();
+                aImg.eq(i).stop().fadeIn();
+
+                //小点点击时，为了不影响上、下切换，一定要同步全局标识变量！！！
+                num=i;
+
+            });
+
+        });
+    </script>
+</head>
+<body>
+    
+    <div class="banner">
+        
+        <ul class="imgList">
+            <li><a href="javascript:;"><img src="images/xiaomi/1.jpg" height="420" width="992" /></a></li>
+            <li><a href="javascript:;"><img src="images/xiaomi/2.jpg" height="420" width="992" /></a></li>
+            <li><a href="javascript:;"><img src="images/xiaomi/3.jpg" height="420" width="992" /></a></li>
+            <li><a href="javascript:;"><img src="images/xiaomi/4.jpg" height="420" width="992" /></a></li>
+            <li><a href="javascript:;"><img src="images/xiaomi/5.jpg" height="420" width="992" /></a></li>
+        </ul>
+        
+        <div class="prevBtn"></div>
+        <div class="nextBtn"></div>
+    
+        <ol class="btnList">
+            <li class="current">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ol>
+
+    </div>
+
+
+</body>
+</html>

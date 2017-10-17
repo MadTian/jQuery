@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Document</title>
+    <style type="text/css">
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: deepskyblue;
+            border: 1px solid #000;
+            margin-top: 10px;
+        }
+        .myClass{
+            border-radius: 50%;
+        }
+    </style>
+    <script type="text/javascript" src="jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            
+            var oBtn=$('button');
+            var oDiv=$('div');
+
+            oBtn.click(function(event) {
+                
+                // oDiv.attr({
+                //     'id': 'box',
+                //     'class': 'myClass',
+                //     'title':'这是一个圆'
+                // });
+
+                alert( oDiv.attr('title') );
+
+            });
+
+
+        });
+    </script>
+</head>
+<body>
+    
+    <button>按钮</button>
+    <div title="这是一个方"></div>
+
+</body>
+</html>

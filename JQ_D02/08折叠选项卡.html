@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            list-style: none;
+        }
+        .list{
+            width: 108px;
+            background-color: #468ED1;
+            margin: 100px auto 0;
+            padding: 20px 0;
+        }
+        .list li{
+            cursor: pointer;
+        }
+        .list li.current h1{
+            background-image: url(images/open.gif);
+        }
+        .list li.current ol{
+            display: block;
+        }
+        .list li h1,.list ol li{
+            height: 35px;
+            text-align: center;
+            line-height: 35px;
+        }
+        .list li h1{
+            color: yellow;
+            font-size: 20px;
+            background: url(images/close.gif) no-repeat 12px center;
+        }
+        .list ol li{
+            color: #fff;
+        }
+        .list ol{
+            display: none;
+        }
+    </style>
+    <script type="text/javascript" src="jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            
+            //单击标题1时，才干嘛干嘛
+            var aH1=$('.list li h1');
+
+            aH1.click(function(event) {
+                
+                //1.更改当前h1的背景图
+                //2.让当前h1的兄弟ol显示
+                //这些功能直接用js写很麻烦，所以预先用特殊类名current实现了
+                
+                //current比作皇袍
+                //没有皇袍的人，想穿上皇袍：新增current
+                //有皇袍的人，想脱下皇袍：移除current
+
+                //重要的一步：判断匹配元素身上有无皇袍：有无current
+                //判断当前h1的父亲LI有无current
+                var thisFather=$(this).parent();
+                if(thisFather.hasClass('current')){
+
+                    // alert('想脱皇袍');
+                    thisFather.removeClass('current');
+
+
+                }else{
+
+                    // alert('想穿皇袍');
+                    //同时只能有一个目录是展开的，所以要做排他
+                    //1.控制自己
+                    //让当前h1的父亲LI新增current
+                    //穿皇袍
+                    thisFather.addClass('current');
+                    //2.还原我的小伙伴们
+                    //清除异己
+                    //让当前h1的父亲LI的小伙伴们移除current
+                    thisFather.siblings('li').removeClass('current');
+
+                }
+
+
+                
+
+            });
+
+
+        });
+    </script>
+</head>
+<body>
+    
+    <ul class="list">
+        <li class="current">
+            <h1>事件</h1>
+            <ol>
+                <li>最近</li>
+                <li>上周</li>
+                <li>上月</li>
+            </ol>
+        </li>
+        <li>
+            <h1>娱乐</h1>
+            <ol>
+                <li>游戏</li>
+                <li>电影</li>
+                <li>电视</li>
+            </ol>
+        </li>
+        <li>
+            <h1>人物</h1>
+            <ol>
+                <li>美女</li>
+                <li>帅哥</li>
+                <li>缪哥</li>
+            </ol>
+        </li>
+    </ul>
+
+</body>
+</html>

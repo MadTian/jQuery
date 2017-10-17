@@ -1,0 +1,41 @@
+/* 模态窗口S */
+/*ctrl+shift+[    折叠代码块*/
+/*ctrl+shift+]    展开代码块*/
+.blackBg{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #000;
+    z-index: 10000;
+    display: none;
+}
+.loginLayer{
+    width: 442px;
+    height: 297px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -221px;
+    margin-top: -148px;
+    z-index: 10001;
+    display: none;
+}
+.closeLayer{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 6px;
+    top: 8px;
+    cursor: pointer;
+}
+/* 模态窗口E */
+
+/* 跟随广告S */
+/* 制作跟随滚动的广告，该区域必须是绝对定位，而不能是其他定位 */
+.zx{
+    position: absolute;
+} 
+/* 跟随广告E */
+

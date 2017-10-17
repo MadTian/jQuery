@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            border: 0;
+        }
+        .main{
+            display: block;
+            margin: 0 auto;
+        }
+        .ad{
+            width: 120px;
+            height: 290px;
+            position: fixed;
+            top: 0;
+        }
+        .leftAd{
+            left: 0;
+        }
+        .rightAd{
+            right: 0;
+        }
+    </style>
+    <script type="text/javascript" src="jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+
+        $(function() {
+            
+            var aBtn=$('.ad button');
+
+            //给所有的关闭按钮绑定单击事件
+            aBtn.click(function(event) {
+                
+                //如果事件源有很多个，那么 $(this)就代表用户当前正在操作的那个事件源
+                //代表用户当前正在操作的这个“关闭”按钮
+                $(this).parent().hide('fast');
+
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+    <div class="ad leftAd">
+        <img src="img/aside.png" height="270" width="120" />
+        <button>关闭</button>
+    </div>
+    <div class="ad rightAd">
+        <img src="img/aside.png" height="270" width="120" />
+        <button>关闭</button>
+    </div>
+    <img src="img/content.png" height="4466" width="1002" class="main" />
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Document</title>
+</head>
+<body style="font-size: 60px;">
+    
+</body>
+</html>
+<script type="text/javascript">
+    
+    function getClock(){
+
+        var oDate=new Date();
+
+        var iYear=oDate.getFullYear();
+        var iMonth=oDate.getMonth()+1;
+        var iDate=oDate.getDate();
+        var iDay=oDate.getDay();
+        //格式化“周几”
+        if(iDay==1){iDay='星期一';}
+        if(iDay==2){iDay='星期二';}
+        if(iDay==3){iDay='星期三';}
+        if(iDay==4){iDay='星期四';}
+        if(iDay==5){iDay='星期五';}
+        if(iDay==6){iDay='星期六';}
+        if(iDay==0){iDay='星期日';}
+
+        var iHour=oDate.getHours();
+        var iMinute=oDate.getMinutes();
+        var iSecond=oDate.getSeconds();
+        //因为时、分、秒返回是一个数字，个位数数字是不会带0的；
+        //但是时钟时、分、秒都会呈现成 11 : 01 : 01这种格式
+
+        //格式化时、分、秒
+        if(iHour<10){
+            iHour='0'+iHour;
+        }
+        if(iMinute<10){
+            iMinute='0'+iMinute;
+        }
+        if(iSecond<10){
+            iSecond='0'+iSecond;
+        }
+
+        document.body.innerHTML=iYear+'年'+iMonth+'月'+iDate+'日'+' '+iDay+' '+iHour+'：'+iMinute+'：'+iSecond;
+
+
+    }
+
+    //页面一加载就有时间
+    getClock();
+
+    //每隔1秒再刷新1次时间
+    setInterval(getClock, 1000);
+
+    
+
+
+</script>

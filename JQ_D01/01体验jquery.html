@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Document</title>
+    <style type="text/css">
+        div{
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+        }
+    </style>
+    <script type="text/javascript" src="jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+
+        $(function() {
+            
+            // document.getElementsByTagName('button'); -->通过它获取到的数组不允许整体操纵
+            // 在jq中获取元素，统一使用$()选择器环境
+            // $()源码中还是使用getElementsByTagName去获取元素，
+            // 只不过JQ创始人在源码里面对这个函数进行了升级，
+            // 通过$()返回的数组，允许开发者整体操纵
+            $('button').click(function(event) {
+                
+                // $('div').hide('slow');
+                $('div').eq(0).hide('slow');
+
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+    <button>隐藏</button>
+    <div style="background: yellowgreen;"></div>
+    <div style="background: deepskyblue;"></div>
+</body>
+</html>

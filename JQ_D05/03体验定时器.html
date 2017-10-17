@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Document</title>
+</head>
+<body>
+    <button>开启单次定时</button>    
+    <button>开启循环定时</button>    
+    <button>停止单次定时</button>    
+    <button>停止循环定时</button>    
+</body>
+</html>
+<script type="text/javascript">
+    
+    var timer1,timer2;
+
+    var aBtn=document.getElementsByTagName('button');
+
+    function boom(){
+
+        alert('定时炸弹爆炸了！！');
+
+    }
+
+    //开启单次定时
+    aBtn[0].onclick=function(){
+
+        timer1=setTimeout(boom, 1000);
+
+
+    }
+
+    //开启循环定时
+    aBtn[1].onclick=function(){
+
+        // clearInterval(timer2);
+        timer2=setInterval(function(){
+
+            alert('起床了！！');
+
+        }, 1000);
+
+    }
+
+    //停止单次定时
+    aBtn[2].onclick=function(){
+
+        clearTimeout(timer1)
+
+    }
+
+    //停止循环定时
+    aBtn[3].onclick=function(){
+
+        clearInterval(timer2);
+
+    }
+
+
+</script>

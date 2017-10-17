@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Document</title>
+    <style type="text/css">
+        button{
+            background-color: #ccc;
+        }
+    </style>
+    <script type="text/javascript" src="jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            
+            var aBtn=$('button');
+
+            aBtn.click(function(event) {
+                
+                //1.控制自己
+                //得到用户当前正在操作的那个按钮，让它变成黄色
+                $(this).css('background-color', 'orange');
+
+                //2.还原我的小伙伴们
+                //找当前按钮的前后同级按钮，还原成灰色
+                $(this).siblings().css('background-color', '#ccc');
+
+            });
+
+
+
+        });
+    </script>
+</head>
+<body>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+</body>
+</html>

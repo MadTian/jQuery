@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            list-style: none;
+        }
+        .box{
+            height: 40px;
+            width: 258px;
+            margin: 100px auto 0;
+        }
+        .box input{
+            float: left;
+            width: 210px;
+            padding-left: 6px;
+            height: 40px;
+            background: url(images/left.jpg);
+            color: #ccc;
+        }
+        .box button{
+            float: right;
+            width: 42px;
+            height: 40px;
+            background: url(images/right.jpg);
+        }
+    </style>
+    <script type="text/javascript" src="jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            
+            var oInput=$('.box input');
+
+            //绑定“得到焦点”事件
+            oInput.focus(function(event) {
+               
+                //得到焦点时，需要对输入框做判断；
+                //如果输入框内的文字就是原来的占位文字，才能清空占位文字；
+                //否则（不是占位文字），就什么也不做
+                if( $(this).val()=='请输入文字...' ){
+                    $(this).val('');
+                    $(this).css('color', '#333');
+                }
+                
+
+            });
+
+
+            //绑定“失去焦点”事件
+            oInput.blur(function(event) {
+
+                //失去焦点时，需要对输入框做判断；
+                //如果输入框为空，才能还原占位文字；
+                //否则，什么也不做
+                if( $(this).val()=='' ){
+
+                    $(this).val('请输入文字...');
+                    $(this).css('color', '#ccc');
+
+                }
+
+                
+
+            });
+
+
+        });
+    </script>
+</head>
+<body>
+    
+    <div class="box">
+        <input type="text" value="请输入文字..." />
+        <button></button>
+    </div>
+
+</body>
+</html>

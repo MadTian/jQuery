@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script type="text/javascript">     //小区
+    
+    //小区广场
+    //全局（公有）变量
+    var tv='电视';
+
+    function fn1(){         //凡大家
+
+        alert(tv);
+
+    }
+
+    function fn2(){         //老缪家
+
+        alert(tv);
+
+    }
+
+    function fn3(){         //81家
+
+        tv='坏电视';
+
+    }
+
+    fn1();          //电视
+    fn3();          //把内存中变量的值修改成“坏电视”
+    fn2();          //坏电视
+    
+
+
+</script>

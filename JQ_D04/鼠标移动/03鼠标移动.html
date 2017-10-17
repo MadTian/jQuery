@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Document</title>
+    <style type="text/css">
+        .box{
+            width: 400px;
+            height: 400px;
+            border: 1px solid #000;
+            background-color: pink;
+            margin: 100px 0 0 100px;
+        }
+    </style>
+    <script type="text/javascript" src="jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            
+            /*$('.box').mousemove(function(event) {
+
+                console.log('鼠标移动了');
+
+            }).mouseenter(function(event) {
+                
+                console.log('鼠标移入了');
+
+            }).mouseleave(function(event) {
+
+                console.log('鼠标离开了');
+
+            });*/
+
+            $('.box').mousemove(function(event) {
+
+                //event变量存储着一个对象...
+                //event对象：记录事件的信息，就相当于事件的黑匣子
+                //黑匣子：记录飞机飞行的一个信息
+                var x=event.pageX;
+                var y=event.pageY;
+                $(this).html(x+'px，'+y+'px');
+
+
+            });
+
+
+        });
+    </script>
+</head>
+<body>
+    
+    <div class="box">100px，100px</div>
+
+</body>
+</html>

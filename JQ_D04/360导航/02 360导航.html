@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            list-style: none;
+        }
+        .list{
+            width: 762px;
+            height: 280px;
+            border: 1px solid #ccc;
+            margin: 100px auto 0;
+        }
+        .list li{
+            float: left;
+            width: 178px;
+            height: 125px;
+            margin: 10px 0 0 10px;
+            position: relative;
+        }
+        .list li div{
+            width: 143px;
+            height: 25px;
+            padding-left: 35px;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            color: #fff;
+            line-height: 25px;
+        }
+        .list li div span{
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            left: 8px;
+            top: 4px;
+            background: url(images/sprite.png);
+        }
+    </style>
+    <script type="text/javascript" src="jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            
+            // span*8
+            // 精灵图位置*8
+
+            // aSpan=...
+
+            // span00  0,0         index=0;        index*-25;
+            // span01  0,-25       index=1;
+            // span02  0,-50       index=2;
+            
+            var aSpan=$('.list li span');
+            aSpan.each(function(index, el) {
+                
+                // $(el)   -> span00 span01...
+                // index   -> 0,1,2...
+                // Y轴的偏移不是死值，而是动态
+                var y=index*-25;
+                $(el).css('background-position', '0px '+y+'px');
+
+            });
+
+
+
+        });
+    </script>
+</head>
+<body>     
+
+    <ul class="list">
+        <li>
+            <img src="images/01.JPG" />
+            <div>
+                <span></span>
+                百度一下
+            </div>
+        </li>
+        <li>
+            <img src="images/02.JPG" />
+            <div>
+                <span></span>
+                淘宝网
+            </div>
+        </li>
+        <li>
+            <img src="images/03.JPG" />
+            <div>
+                <span></span>
+                新浪网
+            </div>
+        </li>
+        <li>
+            <img src="images/04.JPG" />
+            <div>
+                <span></span>
+                网易新闻
+            </div>
+        </li>
+        <li>
+            <img src="images/05.JPG" />
+            <div>
+                <span></span>
+                搜狐网
+            </div>
+        </li>
+        <li>
+            <img src="images/06.JPG" />
+            <div>
+                <span></span>
+                腾讯网
+            </div>
+        </li>
+        <li>
+            <img src="images/07.JPG" />
+            <div>
+                <span></span>
+                优酷视频
+            </div>
+        </li>
+        <li>
+            <img src="images/08.JPG" />
+            <div>
+                <span></span>
+                京东
+            </div>
+        </li>
+    </ul>
+
+
+</body>
+</html>

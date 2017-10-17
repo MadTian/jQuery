@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            list-style: none;
+        }
+        .container{
+            width: 350px;
+            height: 350px;
+            border: 1px solid #ccc;
+            margin: 100px 0 0 100px;
+            position: relative;
+        }
+        .magnifier{
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: rgba(254,222,79, 0.5);
+            display: none;
+        }
+        .rightBox{
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            top: -1px;
+            left: 500px;
+            border: 1px solid #ccc;
+            overflow: hidden;
+            display: none;
+        }
+    </style>
+    <script type="text/javascript" src="jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            
+            var oContainer=$('.container');
+            var oMagnifier=$('.magnifier');
+            var oRightBox=$('.rightBox');
+
+            oContainer.mouseenter(function(event) {
+                
+                //鼠标移入时，让放大镜和右侧盒子显示
+                oMagnifier.show();
+                oRightBox.show();
+
+            }).mouseleave(function(event) {
+
+                //鼠标离开时，让放大镜和右侧盒子隐藏
+                oMagnifier.hide();
+                oRightBox.hide();
+
+            }).mousemove(function(event) {
+                
+                //1.让放大镜跟随鼠标移动
+                
+
+                
+                //2.让右侧大图跟随放大镜移动
+
+            });
+
+
+
+
+        });
+    </script>
+</head>
+<body>
+    
+    <div class="container">
+        
+        <img src="images/small.jpg" height="350" width="350" />
+
+        <!-- 放大镜 -->
+        <div class="magnifier"></div>
+        
+        <!-- 右侧大图片容器 -->
+        <div class="rightBox">
+            <img src="images/big.jpg" height="800" width="800" />
+        </div>
+
+    </div>
+
+
+
+</body>
+</html>

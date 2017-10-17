@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Document</title>
+    <style type="text/css">
+        div,h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <button>走你！</button>
+        <button>停下！</button>
+    </div>
+
+    <h1>等待点名！</h1>
+
+
+</body>
+</html>
+<script type="text/javascript">
+    
+    var timer;
+    var arry=['朱雨琪','王琳','肖萧','谢旭伦','李娜','方乐康','项慧','冉丹丹','崔南南','王逸萍','周瑞杰','胡慢璐','张漫','李姗姗','张微'];
+
+    var aBtn=document.getElementsByTagName('button');
+    var oH1=document.getElementsByTagName('h1')[0];
+
+    //单击“走你”，随机选名
+    aBtn[0].onclick=function(){
+
+        //为了做动画，使用定时器每隔一段时间，生成一个名字，并插入
+
+        timer=setInterval(function(){
+
+            //通过公式返回一个随机的数组下标
+            var i=parseInt( Math.random() * arry.length );
+            oH1.innerHTML=arry[i];
+
+        }, 30);
+
+    }
+
+    //单击“停止”，选出幸运儿
+    aBtn[1].onclick=function(){
+
+        clearInterval(timer);
+
+    }
+
+</script>

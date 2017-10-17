@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            list-style: none;
+        }
+        img{
+            display: block;
+            margin: 0 auto;
+        }
+        .hasFixed{
+            position: fixed;
+            left: 50%;
+            top: 0;
+            margin-left: -501px;
+        }
+    </style>
+    <script type="text/javascript" src="jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+
+        $(function() {
+            
+            // 当页面卷去header的高度时，就让nav变成固定定位
+
+            var oNav=$('.nav');
+            var oMain=$('.main');
+
+            //获取nav距离顶部的距离，一定不要在scroll事件中获取，因为nav即将成为固定定位；
+            //而一旦成为固定定位，offset().top返回的值就不稳定了；
+            //而if判断中需要一个稳定的值
+            var t=oNav.offset().top;
+
+
+            $(window).scroll(function(event) {
+                
+                if( $(this).scrollTop()>t ){
+
+                    oNav.addClass('hasFixed');
+                    // 导航一旦变成固定定位，header和main之间就没有间隙了，所以手动添加上间隙
+                    oMain.css('margin-top', 82);
+
+                }else{
+
+                    oNav.removeClass('hasFixed');
+                    // 导航一旦变成标准流，header和main之间就又有间隙了，所以手动还原margin-top
+                    oMain.css('margin-top', 0);
+                    
+                }
+
+
+            });
+
+
+
+
+        });
+
+
+    </script>
+</head>
+<body>
+    
+    <img src="images/head.png" height="168" width="1002" class="header" />
+    <img src="images/head.png" height="168" width="1002" class="header" />
+    <img src="images/head.png" height="168" width="1002" class="header" />
+    <img src="images/nav.png" height="82" width="1002" class="nav" />
+    <img src="images/main.png" height="3273" width="1002" class="main" />
+
+
+</body>
+</html>

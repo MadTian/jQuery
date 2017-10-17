@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            list-style: none;
+        }
+        div{
+            width: 200px;
+            height: 100px;
+            border: 1px solid #000;
+            text-align: center;
+            line-height: 100px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+    <script type="text/javascript" src="jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            
+            var oBox=$('.box');
+
+            oBox.click(function(event) {
+                alert('恭喜你中奖了！');
+            });
+
+            //当鼠标在整个页面中移动时，让盒子跟随鼠标一起移动
+            $('html,body').mousemove(function(event) {
+                
+                //让盒子跟随鼠标一起移动
+                //先得到鼠标的运行轨迹
+                var x=event.pageX;
+                var y=event.pageY;
+                //将盒子的定位方向值和鼠标的轨迹做同步
+                oBox.css({
+                    'left': x+10,
+                    'top': y+10
+                });
+
+            });
+
+
+        });
+    </script>
+</head>
+<body>
+    
+    <div class="box">点击中大奖！！</div>
+
+
+</body>
+</html>

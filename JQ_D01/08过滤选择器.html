@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script type="text/javascript" src="jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+
+	$(function() {
+		
+		var aBtn=$('button');
+
+		aBtn.eq(0).click(function(event) {
+			
+			$('li:first').css('background-color', 'deepskyblue');
+
+		});
+
+		aBtn.eq(1).click(function(event) {
+			
+			$('li:last').css('background-color', 'deepskyblue');
+
+		});
+
+		aBtn.eq(2).click(function(event) {
+			
+			//先找到所有LI组成一个数组，再将这个数组中拥有IDliID的元素从数组中剔除；
+			//返回用户一个全新组成的数组
+			// $('li:not(#liId)').css('background-color', 'deepskyblue');
+			$('li:not(:last)').css('background-color', 'deepskyblue');
+
+		});
+
+		aBtn.eq(3).click(function(event) {
+			
+			$('li:not(:eq(2))').css('background-color', 'deepskyblue');
+
+		});
+
+		aBtn.eq(4).click(function(event) {
+			
+			$('li:even()').css('background-color', 'deepskyblue');
+
+		});
+
+		aBtn.eq(5).click(function(event) {
+			
+			$('li:odd()').css('background-color', 'deepskyblue');
+
+		});
+
+		aBtn.eq(6).click(function(event) {
+			
+			$('li:gt(0)').css('background-color', 'deepskyblue');
+
+		});
+
+		aBtn.eq(7).click(function(event) {
+			
+			$('li:lt(5)').css('background-color', 'deepskyblue');
+
+		});
+
+		$('button:last').click(function(event) {
+			
+			// $('li').eq(5).css('background-color', 'deepskyblue');
+			$('li:eq(5)').css('background-color', 'deepskyblue');
+
+		});
+
+	});
+
+</script>
+</head>
+
+<body>
+<button>选择第一个li</button>
+<button>选择最后一个li</button>
+<button>选择所有li排除最后一个</button>
+<button>选择所有li排除第二个</button>
+<button>选择所有索引值为偶数个li</button>
+<button>选择所有索引值为奇数个li</button>
+<button>选择大于第0个的li</button>
+<button>选择小于第5个的li</button>
+<button>选择第5个的li</button>
+<ul>
+	<li>这是一个li</li>
+	<li>这是一个li</li>
+	<li>这是一个li</li>
+	<li>这是一个li</li>
+	<li>这是一个li</li>
+	<li>这是一个li</li>
+	<li>这是一个li</li>
+	<li>这是一个li</li>
+	<li>这是一个li</li>
+	<li id="liId">这是一个li</li>
+</ul>
+</body>
+</html>

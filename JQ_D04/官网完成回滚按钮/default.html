@@ -1,0 +1,1236 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <title>传智播客官网-改变中国IT教育,我们正在行动</title>
+    <link type="image/x-icon" rel="shortcut icon" href="images/favicon.ico" /> 
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="css/banner.css"/>
+    <link rel="stylesheet" type="text/css" href="css/zx.css"/>
+    <link rel="stylesheet" type="text/css" href="css/jquery.css" />
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</head> 
+<body>
+
+<!-- 模态窗口S -->
+<div class="blackBg"></div>
+<div class="loginLayer">
+    <img src="images/login.png" />
+    <div class="closeLayer"></div>
+</div>
+<!-- 模态窗口E -->
+
+
+<!-- 跟随导航 -->
+<div class="coursefd" style="display: none;">
+	<div class="inner">
+		<ul>
+			<li class="cur"><div></div><span>JavaEE</span></li>
+			<li><div></div><span>Android</span></li>
+			<li><div></div><span>PHP</span></li>
+			<li><div></div><span>UI设计</span></li>
+			<li><div></div><span>iOS</span></li>			
+			<li><div></div><span>前端与移动开发</span></li>
+			<li><div></div><span>C/C++</span></li>
+			<li><div></div><span>网络营销</span></li>
+			<li><div></div><span>Python</span></li>
+			<li style="border-right: 0;"><div></div><span>云计算之大数据</span></li>
+		</ul>
+	</div>
+</div>
+
+<!-- 弹窗 -->
+<div id="webim" >
+    <dl class="dlstyle">
+        <dt class="dtstyle">
+            <span id="webimclosebutton" style="cursor: pointer;" title="点击关闭">关闭</span>
+        </dt>
+    </dl>
+    <dl>
+        <dd>
+            <a href="" id="webim_link" target="_blank">
+                <img id="webim_img" src="images/20161017173426259.jpg" style="height: 188px; width: 280px" />
+            </a>
+        </dd>
+    </dl>
+</div>
+
+<!-- 直通车 -->
+<div class="topbar">
+	<div class="inner">
+		<div class="top_l">
+			<p>传智播客旗下品牌：&nbsp; <a href="http://www.itheima.com" target="_blank">黑马程序员</a>&nbsp; | &nbsp;<a href="http://v.itcast.cn" target="_blank">博学谷</a>&nbsp; | &nbsp;<a href="javascript:;" id="layerBtn">云课堂</a></p>	
+		</div>
+		<div class="top_r">
+			<p class="slogan">改变中国IT教育，我们正在行动 &nbsp;&nbsp;&nbsp;&nbsp;全国咨询热线：<strong>400-618-4000</strong></p>				
+		</div>
+	</div>
+</div>
+
+<!-- 右侧咨询栏 --> 
+<div class="zx" style="display: block;">
+    <ul>
+        <li class="li_1">
+            <a href="http://d.itcast.cn/3" target="_blank">
+                <span class="icon_s">&nbsp;</span>
+                <p>在线咨询</p> 
+            </a>
+        </li>
+        <li class="li_qq">
+            <a href="http://d.itcast.cn/3" target="_blank">
+                <span class="icon_s">&nbsp;</span>
+                <p>QQ咨询</p> 
+            </a>                            
+        </li>           
+        <li class="li_3">
+            <a href="http://d.itcast.cn/7" target="_blank">
+                <span class="icon_s">&nbsp;</span>
+                <p>武汉咨询</p> 
+            </a>                            
+        </li>
+        <li class="li_2 li_gd">
+            <p class="p_tm"></p>
+            <span class="icon_s">&nbsp;</span>
+            <p>匿名咨询</p>             
+        </li>       
+        <li class="li_4">
+            <a href="http://www.itcast.cn/channel/flow.shtml" target="_blank">
+                <span class="icon_s">&nbsp;</span>
+                <p>在线报名</p> 
+            </a>                        
+        </li>   
+        <li class="li_5 li_gd">
+            <span class="icon_s">&nbsp;</span>
+            <p>电话咨询</p>
+            <div>
+                <p>400-618-4000</p>
+            </div>
+        </li>                                               
+        <li class="li_6" id="back">
+            <a href="javascript:;">
+                <span class="icon_s">&nbsp;</span>
+                <p>返回顶部</p> 
+            </a>                        
+        </li>               
+    </ul>
+</div>
+
+<!-- 头部 -->
+<div class="header">
+    <!-- 头部首页 -->
+    <div class="header_con">
+    	<div class="inner">
+    		<h1><a href="http://www.itcast.cn"><img src="picture/logo.png" alt="传智播客"/></a></h1>
+    		<div class="nav">
+    			<ul class="nav_li">
+    				<li><a href="javascript:;" class="a_gd a_default a_js">免费学习资源</a></li>
+    				<li><a href="/course.shtml" class="a_gd a_default a2_js" target="_blank">课程中心</a></li>
+    				<li><a href="http://www.itcast.cn/subject/videohz/index.shtml" class="a_gd a_default a2_js" target="_blank">学科指南</a></li>
+    				<li><a href="http://i.itcast.cn" class="a_gd a_default a2_js" target="_blank">学员故事</a></li>
+    				<li><a href="http://bbs.itcast.cn" class="a_gd a_default a2_js" target="_blank">传智社区</a></li>
+    				<li><a href="http://www.itcast.cn/subject/onair/index.shtml?nav" class="a_gd a_default a2_js" target="_blank" style="color:#f00;">教学直播间<span style="position:relative; bottom:6px;"><img src="picture/hot.gif" style="display:inline-block;" /></span></a></li>
+    			</ul>
+    		</div>
+    		<div class="school_btn">
+    		    <span>全国校区 <i class="iconfont sfont">&#xe609;</i></span>
+    			<p class="linebg"></p>
+                <ul>
+        			<li><a href="http://www.itcast.cn" class="a_gd a_default">北京校区</a></li>
+                    <li><a href="http://sh.itcast.cn" class="a_gd a_default">上海校区</a></li>
+                    <li><a href="http://gz.itcast.cn" class="a_gd a_default">广州校区</a></li>
+                    <li><a href="http://sz.itcast.cn" class="a_gd a_default">深圳校区</a></li>
+                    <li><a href="http://wh.itcast.cn" class="a_gd a_default">武汉校区</a></li>
+                    <li><a href="http://zz.itcast.cn" class="a_gd a_default">郑州校区</a></li>
+                    <li><a href="http://xa.itcast.cn" class="a_gd a_default">西安校区</a></li>
+                    <li><a href="http://heb.itcast.cn" class="a_gd a_default">哈尔滨校区</a></li>
+                    <li><a href="http://cs.itcast.cn" class="a_gd a_default">长沙校区</a></li>
+                    <li><a href="http://jn.itcast.cn" class="a_gd a_default">济南校区</a></li>
+                    <li><a href="http://cq.itcast.cn" class="a_gd a_default">重庆校区</a></li>
+                    <li><a href="http://nj.itcast.cn" class="a_gd a_default">南京校区</a></li>
+                    <li><a href="http://hz.itcast.cn" class="a_gd a_default">杭州校区</a></li>
+                    <li><a href="http://cd.itcast.cn" class="a_gd a_default">成都校区</a></li>
+                    <li><a href="http://sjz.itcast.cn" class="a_gd a_default">石家庄校区</a></li>
+                </ul>	
+            </div>			
+    		<div class="bmbtn">
+            	<a href="/channel/flow.shtml" class="a_gd" target="_blank">报名流程</a>
+            </div>		
+    	</div>
+    </div>
+    <!-- 二级导航 -->
+    <div class="fdnav fdfree">
+    	<ul>
+    		<li> <a href="http://open.itcast.cn" class="a_gd a_default" target="_blank"> <img src="picture/openbg.jpg"/> <span>公开课</span> </a> </li>
+    		<li class="li_s"> <a href="http://v.itcast.cn/" class="a_gd a_default" target="_blank"> <img src="picture/kubg.jpg"/> <span>视频库</span> </a> </li>
+    		<li> <a href="http://d.itcast.cn/s" class="a_gd a_default" target="_blank"> <img src="picture/yunbg.jpg"/> <span>云课堂</span> </a> </li>
+    		<li> <a href="javascript:;" class="a_gd a_default"> <img src="picture/studybg.jpg"/> <span>学习光盘</span> </a> </li>		
+    		<li> <a href="http://www.itcast.cn/subject/book/index.shtml" target="_blank" class="a_gd a_default"> <img src="picture/bybg.jpg"/> <span>原创教材</span> </a> </li>
+    		<li class="li_last"> <a href="javascript:;" class="a_gd a_default"> <img src="picture/tkbg.jpg" /> <span>传智特刊</span> </a> </li>
+    	</ul>
+    </div>	
+</div>
+
+<!-- 首页banner焦点区域 S -->
+<div class="bancon">
+    
+    <div class="ban_up">
+        <div class="ban"> 
+            <!-- 学科导航  S -->
+            <div class="sub_nav">
+                <!--一级类目 -->
+                <ul class="nav_txt">
+                    <li class="nav_li"><a href="http://www.itcast.cn/subject/javaeezly/index.shtml" target="_blank"><span>JavaEE培训</span><i class="iconfont">&#xe614;</i></a></li>
+                    <li class="nav_li"><a href="http://www.itcast.cn/subject/androidzly/index.shtml" target="_blank"><span>Android培训</span><i class="iconfont">&#xe614;</i></a></li>
+                    <li class="nav_li"><a href="http://www.itcast.cn/subject/phpzly/index.shtml" target="_blank"><span>PHP培训</span><i class="iconfont">&#xe614;</i></a></li>
+                    <li class="nav_li"><a href="http://www.itcast.cn/subject/uizly/index.shtml" target="_blank"><span>UI设计培训</span><i class="iconfont">&#xe614;</i></a></li>
+                    <li class="nav_li"><a href="http://www.itcast.cn/subject/ioszly/index.shtml" target="_blank"><span>iOS培训</span><i class="iconfont">&#xe614;</i></a></li>
+                    <li class="nav_li"><a href="http://www.itcast.cn/subject/webzly/index.shtml" target="_blank"><span>前端与移动开发培训</span><i class="iconfont">&#xe614;</i></a></li>
+                    <li class="nav_li"><a href="http://www.itcast.cn/subject/czly/index.shtml" target="_blank"><span>C/C++培训</span><i class="iconfont">&#xe614;</i></a></li>
+                    <li class="nav_li"><a href="http://www.itcast.cn/subject/mzly/index.shtml" target="_blank"><span>网络营销培训</span><i class="iconfont">&#xe614;</i></a></li>
+                    <li class="nav_li"><a href="http://www.itcast.cn/subject/pythonzly/index.shtml" target="_blank"><span>Python培训</span><i class="iconfont">&#xe614;</i></a></li>
+                    <li class="nav_li"><a href="http://www.itcast.cn/subject/cloudzly/index.html" target="_blank"><span>云计算之大数据培训</span><i class="iconfont">&#xe614;</i></a></li>	
+                </ul>
+                <!--二级类目 -->
+                <div class="course_kind">
+                    <ul class="icon_fu">
+                        <li class="icon_fuli">
+                            <ul class="icon_ul">
+                                <li class="a_gd">
+                                    <a href="http://www.itcast.cn/subject/javaeezly/index.shtml" target="_blank">
+                                        <span class="a_gd a_default"><i class="iconfont a_gd a_default">&#xe642;</i></span>
+                                        <p>课程详情</p>
+                                    </a>
+                                </li>
+                                <li class="a_gd">
+                                    <a href="http://bbs.itcast.cn/forum.php?mod=redirect&goto=findpost&ptid=85684&pid=471264&fromuid=110341" target="_blank">
+                                        <span class="a_gd a_default"><i class="iconfont a_gd a_default">&#xe630;</i></span>
+                                        <p>就业薪资</p>
+                                    </a>
+                                </li>					
+                                <li class="a_gd">
+                                    <a href="/channel/teacher.shtml#ajavaee" target="_blank">
+                                        <span class="a_gd a_default"><i class="iconfont a_gd a_default">&#xe652;</i></span>
+                                        <p>师资库</p>
+                                    </a>
+                                </li>
+                                <li class="a_gd">
+                                    <a href="http://v.itcast.cn/map/22.html" target="_blank">
+                                        <span class="a_gd a_default"><i class="iconfont a_gd a_default">&#xe636;</i></span>
+                                        <p>视频下载</p>
+                                    </a>
+                                </li>
+                                <div style=" clear:both; visibility:hidden;"></div>
+                            </ul>
+                        </li>
+                        <li class="icon_fuli">
+                            <ul class="icon_ul">
+                                <li class="a_gd">
+                                    <a href="http://www.itcast.cn/subject/androidzly/index.shtml" target="_blank">
+                                        <span class="a_gd a_default"><i class="iconfont a_gd a_default">&#xe634;</i></span>
+                                        <p>课程详情</p>
+                                    </a>
+                                </li>
+                                <li class="a_gd">
+                                    <a href="http://bbs.itcast.cn/forum.php?mod=redirect&goto=findpost&ptid=85684&pid=471265&fromuid=110341" target="_blank">
+                                        <span class="a_gd a_default"><i class="iconfont a_gd a_default">&#xe623;</i></span>
+                                        <p>就业薪资</p>
+                                    </a>
+                                </li>					
+                                <li class="a_gd">
+                                    <a href="/channel/teacher.shtml#aandroid" target="_blank">
+                                        <span class="a_gd a_default"><i class="iconfont a_gd a_default">&#xe651;</i></span>
+                                        <p>师资库</p>
+                                    </a>
+                                </li>
+                                <li class="a_gd">
+                                    <a href="http://v.itcast.cn/map/21.html" target="_blank">
+                                        <span class="a_gd a_default"><i class="iconfont a_gd a_default">&#xe62e;</i></span>
+                                        <p>视频下载</p>
+                                    </a>
+                                </li>
+                                <div style=" clear:both; visibility:hidden;"></div>
+                            </ul>
+                        </li>
+                        <li class="icon_fuli">
+                            <ul class="icon_ul">
+                                <li class="a_gd">
+                                    <a href="http://www.itcast.cn/subject/phpzly/index.shtml" target="_blank">
+                                        <span class="a_gd a_default"><i class="iconfont a_gd a_default">&#xe62d;</i></span>
+                                        <p>课程详情</p>
+                                    </a>
+                                </li>
+                                <li class="a_gd">
+                                    <a href="http://bbs.itcast.cn/forum.php?mod=redirect&goto=findpost&ptid=85684&pid=471267&fromuid=110341" target="_blank">
+                                        <span class="a_gd a_default"><i class="iconfont a_gd a_default">&#xe627;</i></span>
+                                        <p>就业薪资</p>
+                                    </a>
+                                </li>
+                                <li class="a_gd">
+                                    <a href="/channel/teacher.shtml#aphp" target="_blank">
+                                        <span class="a_gd a_default"><i class="iconfont a_gd a_default">&#xe653;</i></span>
+                                        <p>师资库</p>
+                                    </a>
+                                </li>					
+                                <li class="a_gd">
+                                    <a href="http://v.itcast.cn/map/23.html" target="_blank">
+                                        <span class="a_gd a_default"><i class="iconfont a_gd a_default">&#xe626;</i></span>
+                                        <p>视频下载</p>
+                                    </a>
+                                </li>
+                                <div style=" clear:both; visibility:hidden;"></div>
+                            </ul>
+                        </li>
+                        <li class="icon_fuli">
+                            <ul class="icon_ul">
+                                <li class="a_gd">
+                                    <a href="http://www.itcast.cn/subject/uizly/index.shtml" target="_blank">
+                                        <span class="a_gd a_default"><i class="iconfont a_gd a_default">&#xe631;</i></span>
+                                        <p>课程详情</p>
+                                    </a>
+                                </li>
+                                <li class="a_gd">
+                                    <a href="http://bbs.itcast.cn/forum.php?mod=redirect&goto=findpost&ptid=85684&pid=471268&fromuid=110341" target="_blank">
+                                        <span class="a_gd a_default"><i class="iconfont a_gd a_default" style="font-size:20px;">&#xe638;</i></span>
+                                        <p>就业薪资</p>
+                                    </a>
+                                </li>
+                                <li class="a_gd">
+                                    <a href="/channel/teacher.shtml#aui" target="_blank">
+                                        <span class="a_gd a_default"><i class="iconfont a_gd a_default">&#xe652;</i></span>
+                                        <p>师资库</p>
+                                    </a>
+                                </li>					
+                                <li class="a_gd">
+                                    <a href="http://v.itcast.cn/map/24.html" target="_blank">
+                                        <span class="a_gd a_default"><i class="iconfont a_gd a_default">&#xe628;</i></span>
+                                        <p>视频下载</p>
+                                    </a>
+                                </li>
+                                <div style=" clear:both; visibility:hidden;"></div>
+                            </ul>
+                        </li>
+                        <li class="icon_fuli">
+                            <ul class="icon_ul">									
+                                <li class="a_gd">
+                                    <a href="http://www.itcast.cn/subject/ioszly/index.shtml" target="_blank">
+                                        <span class="a_gd a_default"><i class="iconfont a_gd a_default">&#xe643;</i></span>
+                                        <p>课程详情</p>
+                                    </a>
+                                </li>
+                                <li class="a_gd">
+                                    <a href="http://bbs.itcast.cn/forum.php?mod=redirect&goto=findpost&ptid=85684&pid=471269&fromuid=110341" target="_blank">
+                                        <span class="a_gd a_default"><i class="iconfont a_gd a_default">&#xe632;</i></span>
+                                        <p>就业薪资</p>
+                                    </a>
+                                </li>
+                                <li class="a_gd">
+                                    <a href="/channel/teacher.shtml#aios" target="_blank">
+                                        <span class="a_gd a_default"><i class="iconfont a_gd a_default">&#xe651;</i></span>
+                                        <p>师资库</p>
+                                    </a>
+                                </li>					
+                                <li class="a_gd">
+                                    <a href="http://v.itcast.cn/map/26.html" target="_blank">
+                                        <span class="a_gd a_default"><i class="iconfont a_gd a_default">&#xe625;</i></span>
+                                        <p>视频下载</p>
+                                    </a>
+                                </li>
+                                <div style=" clear:both; visibility:hidden;"></div>
+                            </ul>
+                        </li>
+                        <li class="icon_fuli">
+                            <ul class="icon_ul">
+                                <li class="a_gd">
+                                    <a href="http://www.itcast.cn/subject/webzly/index.shtml" target="_blank">
+                                        <span class="a_gd a_default"><i class="iconfont a_gd a_default">&#xe645;</i></span>
+                                        <p>课程详情</p>
+                                    </a>
+                                </li>
+                                <li class="a_gd">
+                                    <a href="http://bbs.itcast.cn/forum.php?mod=redirect&goto=findpost&ptid=85684&pid=471275&fromuid=110341" target="_blank">
+                                        <span class="a_gd a_default"><i class="iconfont a_gd a_default">&#xe637;</i></span>
+                                        <p>就业薪资</p>
+                                    </a>
+                                </li>
+                                <li class="a_gd">
+                                    <a href="/channel/teacher.shtml#aweb" target="_blank">
+                                        <span class="a_gd a_default"><i class="iconfont a_gd a_default">&#xe653;</i></span>
+                                        <p>师资库</p>
+                                    </a>
+                                </li>					
+                                <li class="a_gd">
+                                    <a href="http://v.itcast.cn/map/50.html" target="_blank">
+                                        <span class="a_gd a_default"><i class="iconfont a_gd a_default">&#xe624;</i></span>
+                                        <p>视频下载</p>
+                                    </a>
+                                </li>
+                                <div style=" clear:both; visibility:hidden;"></div>
+                            </ul>
+                        </li>
+                        <li class="icon_fuli">
+                            <ul class="icon_ul">									
+                                <li class="a_gd">
+                                    <a href="http://www.itcast.cn/subject/czly/index.shtml" target="_blank">
+                                        <span class="a_gd a_default"><i class="iconfont a_gd a_default">&#xe646;</i></span>
+                                        <p>课程详情</p>
+                                    </a>
+                                </li>
+                                <li class="a_gd">
+                                    <a href="http://bbs.itcast.cn/forum.php?mod=redirect&goto=findpost&ptid=85684&pid=471270&fromuid=110341" target="_blank">
+                                        <span class="a_gd a_default"><i class="iconfont a_gd a_default">&#xe62f;</i></span>
+                                        <p>就业薪资</p>
+                                    </a>
+                                </li>
+                                <li class="a_gd">
+                                    <a href="/channel/teacher.shtml#ac" target="_blank">
+                                        <span class="a_gd a_default"><i class="iconfont a_gd a_default">&#xe652;</i></span>
+                                        <p>师资库</p>
+                                    </a>
+                                </li>					
+                                <li class="a_gd">
+                                    <a href="http://v.itcast.cn/map/25.html" target="_blank">
+                                        <span class="a_gd a_default"><i class="iconfont a_gd a_default">&#xe62a;</i></span>
+                                        <p>视频下载</p>
+                                    </a>
+                                </li>
+                                <div style=" clear:both; visibility:hidden;"></div>
+                            </ul>
+                        </li>
+                        <li class="icon_fuli">
+                            <ul class="icon_ul">
+                                <li class="a_gd">
+                                    <a href="http://www.itcast.cn/subject/mzly/index.shtml" target="_blank">
+                                        <span class="a_gd a_default"><i class="iconfont a_gd a_default">&#xe634;</i></span>
+                                        <p>课程详情</p>
+                                    </a>
+                                </li>
+                                <li class="a_gd">
+                                    <a href="http://bbs.itcast.cn/forum.php?mod=redirect&goto=findpost&ptid=85684&pid=471272&fromuid=110341" target="_blank">
+                                        <span class="a_gd a_default"><i class="iconfont a_gd a_default">&#xe633;</i></span>
+                                        <p>就业薪资</p>
+                                    </a>
+                                </li>
+                                <li class="a_gd">
+                                    <a href="/channel/teacher.shtml#anetmarket" target="_blank">
+                                        <span class="a_gd a_default"><i class="iconfont a_gd a_default">&#xe651;</i></span>
+                                        <p>师资库</p>
+                                    </a>
+                                </li>					
+                                <li class="a_gd">
+                                    <a href="http://v.itcast.cn/map/27.html" target="_blank">
+                                        <span class="a_gd a_default"><i class="iconfont a_gd a_default">&#xe625;</i></span>
+                                        <p>视频下载</p>
+                                    </a>
+                                </li>
+                                <div style=" clear:both; visibility:hidden;"></div>
+                            </ul>
+                        </li>
+                        <li class="icon_fuli">
+                            <ul class="icon_ul">
+                                <li class="a_gd">
+                                    <a href="http://www.itcast.cn/subject/pythonzly/index.shtml" target="_blank">
+                                        <span class="a_gd a_default"><i class="iconfont a_gd a_default">&#xe640;</i></span>
+                                        <p>课程详情</p>
+                                    </a>
+                                </li>
+                                <li class="a_gd">
+                                    <a href="http://www.itcast.cn/channel/teacher.shtml#apython" target="_blank">
+                                        <span class="a_gd a_default"><i class="iconfont a_gd a_default">&#xe653;</i></span>
+                                        <p>师资库</p>
+                                    </a>
+                                </li>		
+                                <div style=" clear:both; visibility:hidden;"></div>
+                            </ul>
+                        </li>
+                        <li class="icon_fuli">
+                            <ul class="icon_ul">									
+                                <li class="a_gd">
+                                    <a href="http://www.itcast.cn/subject/cloudzly/index.html" target="_blank">
+                                        <span class="a_gd a_default"><i class="iconfont a_gd a_default">&#xe63e;</i></span>
+                                        <p>课程详情</p>
+                                    </a>
+                                </li>
+                                <li class="a_gd">
+                                    <a href="http://bbs.itcast.cn/forum.php?mod=redirect&goto=findpost&ptid=85684&pid=471274&fromuid=110341" target="_blank">
+                                        <span class="a_gd a_default"><i class="iconfont a_gd a_default">&#xe629;</i></span>
+                                        <p>就业薪资</p>
+                                    </a>
+                                </li>
+                                <li class="a_gd">
+                                    <a href="/channel/teacher.shtml#acloud" target="_blank">
+                                        <span class="a_gd a_default"><i class="iconfont a_gd a_default">&#xe652;</i></span>
+                                        <p>师资库</p>
+                                    </a>
+                                </li>					
+                                <li class="a_gd">
+                                    <a href="http://v.itcast.cn/map/22.html" target="_blank">
+                                        <span class="a_gd a_default"><i class="iconfont a_gd a_default">&#xe62b;</i></span>
+                                        <p>视频下载</p>
+                                    </a>
+                                </li>
+                                <div style=" clear:both; visibility:hidden;"></div>
+                            </ul>
+                        </li>
+                    </ul>											
+                </div>
+            </div>
+            <!-- 学科导航  E --> 
+            <!-- 首页banner  S -->
+            <div id="slideBox" class="slideBox">
+                <div class="hd">
+                    <ul>
+                    	<li class="on"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="bd">
+                    <ul>
+                        <li><a href="javascript:;" ><img src="picture/2016191416191900.jpg" /></a></li>
+                        <li><a href="javascript:;" ><img src="picture/2016521716520830.jpg" /></a></li>
+                        <li><a href="javascript:;" ><img src="picture/2016391210390800.jpg" /></a></li>
+                        <li><a href="javascript:;" ><img src="picture/2016381210381700.jpg" /></a></li>
+                        <li><a href="javascript:;" ><img src="picture/2016151714153100.jpg" /></a></li>
+                        <li><a href="javascript:;" ><img src="picture/2016111915115000.jpg" /></a></li>
+                        <li><a href="javascript:;" ><img src="picture/2016091211094200.jpg" /></a></li>
+                    </ul>
+                </div>		
+                <a class="prev" href="javascript:;"><i class="iconfont bfont">&#xe60b;</i></a>
+                <a class="next" href="javascript:;"><i class="iconfont bfont">&#xe614;</i></a>		
+            </div>
+            <!-- 首页banner  E --> 
+        </div>
+        
+        <!-- 信息港  S -->
+        <div class="info">				
+                <h2>信息港</h2>
+                <ul>
+                <li><i class="sq">&nbsp;</i><a class="a_gd a_default" href="/news/20151230/0856145780.shtml?zxdt" se_prerender_url="loading" target="_blank" title="2016年传智播客各学科学费价格表">2016年传智各学科学费价格表 </a></li>
+                <li><span style="color: #ff0000"><i class="sq">&nbsp;</i></span><a class="a_gd a_default" href="http://www.itcast.cn/subject/videohz/index.shtml?zxdt" se_prerender_url="complete" target="_blank" title="轻松了解传智播客十大学科">轻松了解传智播客十大学科</a></li>
+                <li><span style="color: #ff0000"><i class="sq">&nbsp;</i></span><a class="a_gd a_default" href="http://h5.itcast.cn/yles/mspc?zxdt" se_prerender_url="complete" target="_blank" title="最高优惠3998元，去抢券"><span style="color: #ff0000">最高优惠3998元，去抢券</span></a></li>
+                <li><i class="sq">&nbsp;</i><a class="a_gd a_default" href="http://www.itcast.cn/subject/ioszly/index.shtml?zxdt" se_prerender_url="complete" target="_blank" title="iOS10.0课程同步苹果秋季发布会">iOS10.0课程同步苹果秋季发布会</a></li>
+                <li><i class="sq">&nbsp;</i><a class="a_gd a_default" href="http://www.itcast.cn/subject/cloudonline/index.html?zxdt" se_prerender_url="complete" target="_blank" title="云计算在线班，挑战年薪30W">云计算在线班，挑战年薪30W</a></li>
+                <li><i class="sq">&nbsp;</i><a class="a_gd a_default" href="http://www.itcast.cn/subject/mzly/index.shtml?zxdt" se_prerender_url="complete" target="_blank" title="不用敲代码，让你薪资轻松过万">不用敲代码，让你薪资轻松过万</a></li>
+                <li><i class="sq">&nbsp;</i><a class="a_gd a_default" href="/subject/czly/index.shtml?zxdt" se_prerender_url="complete" target="_blank" title="5个月，带你学透C/C++全栈开发">5个月，带你学透C/C++全栈开发</a></li>
+                <li><i class="sq">&nbsp;</i><a class="a_gd a_default" href="/subject/phpzly/index.shtml?zxdt" se_prerender_url="complete" target="_blank" title="PHP助你快速入门，就业冲击10k+">PHP助你快速入门，就业冲击10k+</a></li>
+                <li><i class="sq">&nbsp;</i><a class="a_gd a_default" href="http://www.itcast.cn/subject/uizly/index.shtml?zxdt" se_prerender_url="complete" target="_blank" title="UI设计打造会代码的全能设计师">UI设计打造会代码的全能设计师</a></li>
+                </ul>
+        </div>
+        <!-- 信息港  E --> 
+    </div>
+    
+    <div class="ban_down">
+        <div class="fast_path"> <s class="cc"></s> <s class="cc cc1"></s> <s class="cc cc2"></s> <s class="cc cc2 cc3"></s>
+            <ul>
+                <li> <a href="/subject/schools/index.shtml" target="_blank"> <i class="iconfont" style="font-size:20px;">&#xe600;</i> <span>校区汇总</span> </a> </li>
+                <li> <a href="/channel/flow.shtml" target="_blank"> <i class="iconfont" style="font-size:20px;">&#xe61d;</i> <span>报名流程</span> </a> </li>
+                <li class="li_r"> <a href="http://bbs.itcast.cn/thread-85797-1-1.html" target="_blank"> <i class="iconfont" style="font-size:20px;">&#xe622;</i> <span>来校路线</span> </a> </li>
+                <li class="li_b"> <a href="http://i.itcast.cn" target="_blank"> <i class="iconfont">&#xe61c;</i> <span>学员故事</span> </a> </li>
+                <li class="li_b"> <a href="http://bbs.itcast.cn/forum-231-1.html" target="_blank"> <i class="iconfont">&#xe64f;</i> <span>活动专区</span> </a> </li>
+                <li class="li_r li_b"> <a href="http://bbs.itcast.cn/forum-228-1.html" target="_blank"> <i class="iconfont">&#xe602;</i> <span>开班报道</span> </a> </li>
+            </ul>
+        </div>
+        <div class="fast_r">
+            <!-- 首页快速通道右侧广告位 -->
+            <ul>
+                <li><a href="http://www.itcast.cn/subject/videohz/index.shtml?a7" target="_blank"><img src="picture/20161014113433498.jpg" /></a></li>
+                <li><a href="http://bbs.itcast.cn/thread-85684-1-1.html?a7" target="_blank"><img src="picture/20161014113453577.jpg" /></a></li>
+                <li><a href="http://bbs.itcast.cn/thread-86107-1-1.html?a7" target="_blank"><img src="picture/20160219132710304.jpg" /></a></li>
+                <li><a href="/subject/zhaopin/index.shtml?a7" target="_blank"><img src="picture/20161014113534360.jpg" /></a></li>
+            </ul>
+            <!-- 首页快速通道右侧广告位 -->
+        </div>
+    </div>
+    
+</div>
+<p class="clear"></p>
+<!-- 首页banner焦点区域 E -->
+	
+<!-- 推荐内容  S -->
+<div class="lay lay_tj">
+
+    <div class="hd"> 
+        <h2 class="hd_tt">推荐内容</h2>
+        <div class="hd_rr">
+            <span><i class="iconfont">&#xe60b;</i></span> 
+            <span><i class="iconfont">&#xe614;</i></span> 
+        </div>
+    </div>
+    
+    <div class="lay_con" id="czlunbo">
+        <div id="czimg">
+            <!-- 首页推荐内容 -->
+            <ul>
+                <li class="a_gd">
+                    <p class="img_box">
+                        <a class="a_gd a_default" href="javascript:;">
+                            <img src="picture/20160930105900608.jpg" style="height: 112px; width: 124px" />
+                        </a>
+                    </p>
+                    <p class="slideup_p">
+                        <a class="a_gd a_default" href="javascript:;" >
+                            揭秘网红身后的团队<br />
+                            魔性营销第一课
+                        </a>
+                    </p>
+                </li>
+                
+                <li class="a_gd">
+                    <p class="img_box">
+                        <a class="a_gd a_default" href="javascript:;">
+                            <img src="picture/20160308130335283.jpg" style="height: 128px" />
+                        </a>
+                    </p>
+                    <p class="slideup_p">
+                        <a class="a_gd a_default" href="javascript:;">
+                            我滴老师是歌神<br />
+                            我们请你看电影
+                        </a>
+                    </p>
+                </li>
+                
+                <li class="a_gd">
+                    <p class="img_box">
+                        <a class="a_gd a_default" href="javascript:;" >
+                            <img src="picture/20160624101308951.jpg" style="height: 128px; width: 200px" />
+                        </a>
+                    </p>
+                    <p class="slideup_p">
+                        <a class="a_gd a_default" href="javascript:;">
+                            全套iOS视频+笔记源码<br />
+                            看完月薪过万不是梦！ 
+                        </a>
+                    </p>
+                </li>
+                
+                <li class="a_gd">
+                    <p class="img_box">
+                        <a class="a_gd a_default" href="javascript:;">
+                            <img src="picture/20160308130953935.jpg" style="height: 122px; width: 130px" />
+                        </a>
+                    </p>
+                    <p class="slideup_p">
+                        <a class="a_gd a_default" href="javascript:;">
+                            全套C/C++教程+笔记+配套工具<br />
+                            超百万用户受益
+                        </a>
+                    </p>
+                </li>
+
+                <li class="a_gd">
+                    <p class="img_box">
+                        <a class="a_gd a_default" href="javascript:;">
+                            <img src="picture/20160401103048600.jpg" style="height: 117px" />
+                        </a>
+                    </p>
+                    <p class="slideup_p">
+                        <a class="a_gd a_default" href="javascript:;">
+                        UI设计学什么<br />
+                        独家分享实体班同步视频+海量素材
+                        </a>
+                    </p>
+                </li>
+            </ul>
+            <ul>
+                <li class="a_gd">
+                    <p class="img_box">
+                        <a class="a_gd a_default" href="javascript:;">
+                            <img src="picture/20160413173959731.jpg" style="height: 128px; width: 230px" />
+                        </a>
+                    </p>
+                    <p class="slideup_p">
+                        <a class="a_gd a_default" href="javascript:;">
+                            十一出游没下载这几个app会后悔<br />
+                            科技很奇妙，喵喵来吐槽
+                        </a>
+                    </p>
+                </li>
+                
+                <li class="a_gd">
+                    <p class="img_box">
+                        <a class="a_gd a_default" href="javascript:;">
+                            <img src="picture/20160524093313645.jpg" style="height: 128px; width: 200px" />
+                        </a>
+                    </p>
+                    <p class="slideup_p">
+                        <a class="a_gd a_default" href="javascript:;">
+                            8年程序员经验吐血分享<br />
+                            全套PHP教程+笔记+配套工具
+                        </a>
+                    </p>
+                </li>
+                
+                <li class="a_gd">
+                    <p class="img_box">
+                        <a class="a_gd a_default" href="javascript:;">
+                            <img src="picture/20160408134917138.jpg" style="height: 124px; width: 135px" />
+                        </a>
+                    </p>
+                    <p class="slideup_p">
+                        <a class="a_gd a_default" href="javascript:;">
+                        &ldquo;视频+源码&rdquo;无保留，全分享<br />
+                        2016最新Android精华资源
+                        </a>
+                    </p>
+                </li>
+                
+                <li class="a_gd">
+                    <p class="img_box">
+                        <a class="a_gd a_default" href="javascript:;">
+                            <img src="picture/20160624101440250.jpg" style="height: 119px; width: 153px" />
+                        </a>
+                    </p>
+                    <p class="slideup_p">
+                        <a class="a_gd a_default" href="javascript:;">
+                        [前端]2016最全最新知识点汇总<br />
+                        视频+源码+技巧+软件+面试
+                        </a>
+                    </p>
+                </li>
+                
+                <li class="a_gd">
+                    <p class="img_box">
+                        <a class="a_gd a_default" href="javascript:;">
+                            <img height="117" src="picture/tj2.jpg" />
+                        </a>
+                    </p>
+                    <p class="slideup_p">
+                        <a class="a_gd a_default" href="javascript:;">
+                        云计算大数据在线实战班<br />
+                        我想挑战年薪30W+
+                        </a>
+                    </p>
+                </li>
+            </ul>
+            <!-- 首页推荐内容 -->
+        </div>
+    </div>
+</div>
+<!-- 推荐内容  E -->	
+
+<!-- 灰色背景区域 S --> 	
+<div class="graybg">
+    <p class="clear"></p>
+    <div class="lay">
+        <div class="hd">
+            <h2 class="hd_tt">传智播客课程中心</h2>
+        </div>		
+        <p class="clear clear_s"></p>			
+                    <div class="lay_con lay_conke lay_android">
+            <div class="div_zong">
+                <a href="http://www.itcast.cn/subject/androidzly/index.shtml" target="_blank">
+                    <h3>Android</h3>
+                    <strong>入门易，成长快<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;移动开发岂止高薪！</strong>
+                    <img src="picture/android.png" /> 
+                </a>
+            </div>
+            <ul class="icon_ul">					
+                <li class="a_gd">
+                    <a href="http://www.itcast.cn/subject/androidzly/index.shtml" target="_blank">
+                        <span class="a_gd a_default"></span><img src="picture/icon1.png"/>
+                        <p>课程介绍</p>
+                    </a>
+                </li>
+                <li class="a_gd">
+                    <a href="http://www.itcast.cn/course/android.shtml" target="_blank">
+                        <span class="a_gd a_default"></span><img src="picture/icon2.png"/>
+                        <p>课程大纲</p>
+                    </a>
+                </li>					
+                <li class="a_gd">
+                    <a href="http://www.itcast.cn/channel/flow.shtml#android" target="_blank">
+                        <span class="a_gd a_default"></span><img src="picture/icon3.png"/>
+                        <p>开班时间</p>
+                    </a>
+                </li>
+                <li class="a_gd">
+                    <a href="http://www.itcast.cn/channel/teacher.shtml#aandroid" target="_blank">
+                        <span class="a_gd a_default"></span><img src="picture/icon4_2.png"/>
+                        <p>师资库</p>
+                    </a>
+                </li>	
+                <li class="a_gd">
+                    <a href="http://bbs.itcast.cn/forum.php?mod=viewthread&tid=85684&page=1#pid471265" target="_blank">
+                        <span class="a_gd a_default"></span><img src="picture/icon5.png"/>
+                        <p>就业薪资</p>
+                    </a>
+                </li>
+                <li class="a_gd">
+                    <a href="http://bbs.itcast.cn/thread-87735-1-1.html" target="_blank">
+                        <span class="a_gd a_default"></span><img src="picture/icon6.png"/>
+                        <p>班级活动</p>
+                    </a>
+                </li>					
+                <li class="a_gd">
+                    <a href="http://open.itcast.cn/java/" target="_blank">
+                        <span class="a_gd a_default"></span><img src="picture/icon7.png"/>
+                        <p>公开课</p>
+                    </a>
+                </li>
+                <li class="a_gd">
+                    <a href="http://v.itcast.cn/map/21.html" target="_blank">
+                        <span class="a_gd a_default"></span><img src="picture/icon8.png"/>
+                        <p>视频下载</p>
+                    </a>
+                </li>					
+                <div style=" clear:both; visibility:hidden;"></div>
+            </ul>
+        </div>		
+        <div class="lay_android">
+                           <div class="city_tab">
+                <div class="inner"> 						<a href=""><div class="colorbg a_gd"></div><span>北京</span></a>						
+                                        <a href=""><div class="colorbg a_gd"></div><span>上海</span></a>						
+                                        <a href=""><div class="colorbg a_gd"></div><span>广州</span></a>						
+                                        <a href=""><div class="colorbg a_gd"></div><span>深圳</span></a>						
+                                        <a href=""><div class="colorbg a_gd"></div><span>武汉</span></a>						
+                                        <a href=""><div class="colorbg a_gd"></div><span>郑州</span></a>						
+                                        <a href=""><div class="colorbg a_gd"></div><span>西安</span></a>						
+                                        <a href=""><div class="colorbg a_gd"></div><span>哈尔滨</span></a>						
+                                        <a href=""><div class="colorbg a_gd"></div><span>长沙</span></a>						
+                                        <a href=""><div class="colorbg a_gd"></div><span>济南</span></a>						
+                                        <a href=""><div class="colorbg a_gd"></div><span>重庆</span></a>						
+                                        <a href=""><div class="colorbg a_gd"></div><span>南京</span></a>						
+                                        <a href=""><div class="colorbg a_gd"></div><span>杭州</span></a>						
+                                        <a href=""><div class="colorbg a_gd"></div><span>成都</span></a>						
+                                        <a href=""><div class="colorbg a_gd"></div><span>石家庄</span></a>						
+                </div>
+            </div>
+            <div class="city_class">					<div class="curren">
+                <ul   class="cur" >																																				<li><a href="#" schoolid="BEIJING" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type1">基</strong>Android 基础班<em></em>2016-11-05<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                                    <li><a href="#" schoolid="BEIJING" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type1">基</strong>Android 基础班<em></em>2016-11-30<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                                                                                <li><a href="#" schoolid="BEIJING" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type1">基</strong>Android 基础班<em></em>2016-12-27<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                        </ul>
+               <ul  class="cur" >																		<li><a href="#" schoolid="BEIJING" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type2">就</strong>Android 就业班<em></em>2016-10-31<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                                                                    <li><a href="#" schoolid="BEIJING" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type2">就</strong>Android 就业班<em></em>2016-12-26<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                        </ul>
+              </div>
+                                <div class="curren">
+                <ul  >																									<li><a href="#" schoolid="SHANGHAI" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type1">基</strong>Android 基础班<em></em>2016-10-31<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                                                                                <li><a href="#" schoolid="SHANGHAI" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type1">基</strong>Android 基础班<em></em>2016-12-15<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                    </ul>
+               <ul >																													<li><a href="#" schoolid="SHANGHAI" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type2">就</strong>Android 就业班<em></em>2016-11-10<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                        <li><a href="#" schoolid="SHANGHAI" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type2">就</strong>Android 就业班<em></em>2016-12-18<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                            </ul>
+              </div>
+                                <div class="curren">
+                <ul  >																																				<li><a href="#" schoolid="GUANGZHOU" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type1">基</strong>Android 基础班<em></em>2016-11-04<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                                    <li><a href="#" schoolid="GUANGZHOU" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type1">基</strong>Android 基础班<em></em>2016-12-20<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                    </ul>
+               <ul >																		<li><a href="#" schoolid="GUANGZHOU" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type2">就</strong>Android 就业班<em></em>2016-11-03<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                                                                    <li><a href="#" schoolid="GUANGZHOU" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type2">就</strong>Android 就业班<em></em>2016-12-21<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                            </ul>
+              </div>
+                                <div class="curren">
+                <ul  >																																				<li><a href="#" schoolid="SHENZHEN" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type1">基</strong>Android 基础班<em></em>2016-11-10<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                                    <li><a href="#" schoolid="SHENZHEN" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type1">基</strong>Android 基础班<em></em>2016-12-04<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                                                                                <li><a href="#" schoolid="SHENZHEN" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type1">基</strong>Android 基础班<em></em>2016-12-26<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                    </ul>
+               <ul >																		<li><a href="#" schoolid="SHENZHEN" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type2">就</strong>Android 就业班<em></em>2016-11-02<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                                                                    <li><a href="#" schoolid="SHENZHEN" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type2">就</strong>Android 就业班<em></em>2016-12-10<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                        <li><a href="#" schoolid="SHENZHEN" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type2">就</strong>Android 就业班<em></em>2016-12-30<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                            </ul>
+              </div>
+                                <div class="curren">
+                <ul  >																									<li><a href="#" schoolid="WUHAN" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type1">基</strong>Android 基础班<em></em>2016-10-20<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                                                                                <li><a href="#" schoolid="WUHAN" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type1">基</strong>Android 基础班<em></em>2016-11-25<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                                                                                <li><a href="#" schoolid="WUHAN" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type1">基</strong>Android 基础班<em></em>2016-12-25<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                                                                </ul>
+               <ul >																													<li><a href="#" schoolid="WUHAN" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type2">就</strong>Android 就业班<em></em>2016-11-12<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                        <li><a href="#" schoolid="WUHAN" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type2">就</strong>Android 就业班<em></em>2016-12-08<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                        <li><a href="#" schoolid="WUHAN" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type2">就</strong>Android 就业班<em></em>2017-01-10<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                            <li><a href="#" schoolid="WUHAN" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type2">就</strong>Android 就业班<em></em>2017-03-16<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                            </ul>
+              </div>
+                                <div class="curren">
+                <ul  >																																				<li><a href="#" schoolid="ZHENGZHOU" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type1">基</strong>Android 基础班<em></em>2016-11-12<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                                    <li><a href="#" schoolid="ZHENGZHOU" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type1">基</strong>Android 基础班<em></em>2016-12-20<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                    </ul>
+               <ul >																		<li><a href="#" schoolid="ZHENGZHOU" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type2">就</strong>Android 就业班<em></em>2016-11-03<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                                                                    <li><a href="#" schoolid="ZHENGZHOU" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type2">就</strong>Android 就业班<em></em>2016-12-30<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                            </ul>
+              </div>
+                                <div class="curren">
+                <ul  >																																				<li><a href="#" schoolid="XIAN" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type1">基</strong>Android 基础班<em></em>2016-12-10<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                        </ul>
+               <ul >																		<li><a href="#" schoolid="XIAN" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type2">就</strong>Android 就业班<em></em>2016-12-06<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                        </ul>
+              </div>
+                                <div class="curren">
+                <ul  >																					</ul>
+               <ul >																		<li><a href="#" schoolid="HAERBIN" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type2">就</strong>Android 就业班<em></em>2016-11-13<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                            </ul>
+              </div>
+                                <div class="curren">
+                <ul  >																									<li><a href="#" schoolid="CHANGSHA" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type1">基</strong>Android 基础班<em></em>2016-10-25<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                                    <li><a href="#" schoolid="CHANGSHA" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type1">基</strong>Android 基础班<em></em>2016-11-25<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                                                                </ul>
+               <ul >																																								<li><a href="#" schoolid="CHANGSHA" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type2">就</strong>Android 就业班<em></em>2016-12-09<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                            <li><a href="#" schoolid="CHANGSHA" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type2">就</strong>Android 就业班<em></em>2017-01-13<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                            </ul>
+              </div>
+                                <div class="curren">
+                <ul  >																																				<li><a href="#" schoolid="JINAN" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type1">基</strong>Android 基础班<em></em>2016-11-15<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                                                                                <li><a href="#" schoolid="JINAN" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type1">基</strong>Android 基础班<em></em>2017-01-05<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                        </ul>
+               <ul >																		<li><a href="#" schoolid="JINAN" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type2">就</strong>Android 就业班<em></em>2016-10-30<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                        <li><a href="#" schoolid="JINAN" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type2">就</strong>Android 就业班<em></em>2016-12-29<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                        </ul>
+              </div>
+                                <div class="curren">
+                <ul  >					 <li> 该校区尚未开设基础班课程，敬请期待！</li>
+              </ul>
+               <ul >					 <li> 该校区尚未开设就业班课程，敬请期待！</li>
+              </ul>
+              </div>
+                                <div class="curren">
+                <ul  >																									<li><a href="#" schoolid="NANJING" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type1">基</strong>Android 基础班<em></em>2016-10-30<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                    </ul>
+               <ul >																													<li><a href="#" schoolid="NANJING" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type2">就</strong>Android 就业班<em></em>2016-11-09<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                            </ul>
+              </div>
+                                <div class="curren">
+                <ul  >																									<li><a href="#" schoolid="HANGZHOU" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type1">基</strong>Android 基础班<em></em>2016-10-27<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                    </ul>
+               <ul >																													<li><a href="#" schoolid="HANGZHOU" subject="android" class="a_gd a_default" target="_blank"><strong class="class_type2">就</strong>Android 就业班<em></em>2016-12-14<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                            </ul>
+              </div>
+                                <div class="curren">
+                <ul  >					 <li> 该校区尚未开设基础班课程，敬请期待！</li>
+              </ul>
+               <ul >					 <li> 该校区尚未开设就业班课程，敬请期待！</li>
+              </ul>
+              </div>
+                                <div class="curren">
+                <ul  >					 <li> 该校区尚未开设基础班课程，敬请期待！</li>
+              </ul>
+               <ul >					 <li> 该校区尚未开设就业班课程，敬请期待！</li>
+              </ul>
+              </div>
+            </div>
+
+            
+             
+            
+            
+            
+             
+        </div>
+        <p class="clear clear_s"></p>
+                    
+        <div class="lay_con lay_conke lay_ui">
+            <div class="div_zong">
+                <a href="http://www.itcast.cn/subject/uizly/index.shtml" target="_blank">
+                    <h3>UI设计</h3>
+                    <strong>打造会代码的全能设计师</strong>
+                    <img src="picture/ui.png" /> 
+                </a>
+            </div>
+            <ul class="icon_ul">					
+                <li class="a_gd">
+                    <a href="http://www.itcast.cn/subject/uizly/index.shtml" target="_blank">
+                        <span class="a_gd a_default"></span><img src="picture/icon1.png"/>
+                        <p>课程介绍</p>
+                    </a>
+                </li>
+                <li class="a_gd">
+                    <a href="http://www.itcast.cn/course/ui.shtml" target="_blank">
+                        <span class="a_gd a_default"></span><img src="picture/icon2.png"/>
+                        <p>课程大纲</p>
+                    </a>
+                </li>					
+                <li class="a_gd">
+                    <a href="http://www.itcast.cn/channel/flow.shtml#ui" target="_blank">
+                        <span class="a_gd a_default"></span><img src="picture/icon3.png"/>
+                        <p>开班时间</p>
+                    </a>
+                </li>
+                <li class="a_gd">
+                    <a href="http://www.itcast.cn/channel/teacher.shtml#aui" target="_blank">
+                        <span class="a_gd a_default"></span><img src="picture/icon4_4.png"/>
+                        <p>师资库</p>
+                    </a>
+                </li>	
+                <li class="a_gd">
+                    <a href="http://bbs.itcast.cn/forum.php?mod=viewthread&tid=85684&page=1#pid471268" target="_blank">
+                        <span class="a_gd a_default"></span><img src="picture/icon5.png"/>
+                        <p>就业薪资</p>
+                    </a>
+                </li>
+                <li class="a_gd">
+                    <a href="http://bbs.itcast.cn/thread-87737-1-1.html" target="_blank">
+                        <span class="a_gd a_default"></span><img src="picture/icon6.png"/>
+                        <p>班级活动</p>
+                    </a>
+                </li>					
+                <li class="a_gd">
+                    <a href="http://open.itcast.cn/icd/" target="_blank">
+                        <span class="a_gd a_default"></span><img src="picture/icon7.png"/>
+                        <p>公开课</p>
+                    </a>
+                </li>
+                <li class="a_gd">
+                    <a href="http://v.itcast.cn/map/24.html" target="_blank">
+                        <span class="a_gd a_default"></span><img src="picture/icon8.png"/>
+                        <p>视频下载</p>
+                    </a>
+                </li>	
+            </ul>				
+        </div>	
+        <div class="lay_ui">
+                           <div class="city_tab">
+                <div class="inner"> 						<a href=""><div class="colorbg a_gd"></div><span>北京</span></a>						
+                                        <a href=""><div class="colorbg a_gd"></div><span>上海</span></a>						
+                                        <a href=""><div class="colorbg a_gd"></div><span>广州</span></a>						
+                                        <a href=""><div class="colorbg a_gd"></div><span>深圳</span></a>						
+                                        <a href=""><div class="colorbg a_gd"></div><span>武汉</span></a>						
+                                        <a href=""><div class="colorbg a_gd"></div><span>郑州</span></a>						
+                                        <a href=""><div class="colorbg a_gd"></div><span>西安</span></a>						
+                                        <a href=""><div class="colorbg a_gd"></div><span>哈尔滨</span></a>						
+                                        <a href=""><div class="colorbg a_gd"></div><span>长沙</span></a>						
+                                        <a href=""><div class="colorbg a_gd"></div><span>济南</span></a>						
+                                        <a href=""><div class="colorbg a_gd"></div><span>重庆</span></a>						
+                                        <a href=""><div class="colorbg a_gd"></div><span>南京</span></a>						
+                                        <a href=""><div class="colorbg a_gd"></div><span>杭州</span></a>						
+                                        <a href=""><div class="colorbg a_gd"></div><span>成都</span></a>						
+                                        <a href=""><div class="colorbg a_gd"></div><span>石家庄</span></a>						
+                </div>
+            </div>
+            <div class="city_class">					<div class="curren">
+                <ul   class="cur" >																									<li><a href="#" schoolid="BEIJING" subject="ui" class="a_gd a_default" target="_blank"><strong class="class_type1">基</strong>UI设计 基础班<em></em>2016-10-24<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                                                                                                                            <li><a href="#" schoolid="BEIJING" subject="ui" class="a_gd a_default" target="_blank"><strong class="class_type1">基</strong>UI设计 基础班<em></em>2016-11-15<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                                    <li><a href="#" schoolid="BEIJING" subject="ui" class="a_gd a_default" target="_blank"><strong class="class_type1">基</strong>UI设计 基础班<em></em>2016-11-28<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                                                                                                                            <li><a href="#" schoolid="BEIJING" subject="ui" class="a_gd a_default" target="_blank"><strong class="class_type1">基</strong>UI设计 基础班<em></em>2016-12-20<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                        </ul>
+               <ul  class="cur" >																													<li><a href="#" schoolid="BEIJING" subject="ui" class="a_gd a_default" target="_blank"><strong class="class_type2">就</strong>UI设计 就业班<em></em>2016-10-26<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                            <li><a href="#" schoolid="BEIJING" subject="ui" class="a_gd a_default" target="_blank"><strong class="class_type2">就</strong>UI设计 就业班<em></em>2016-11-09<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                                                                    <li><a href="#" schoolid="BEIJING" subject="ui" class="a_gd a_default" target="_blank"><strong class="class_type2">就</strong>UI设计 就业班<em></em>2016-12-01<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                            <li><a href="#" schoolid="BEIJING" subject="ui" class="a_gd a_default" target="_blank"><strong class="class_type2">就</strong>UI设计 就业班<em></em>2016-12-14<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                        </ul>
+              </div>
+                                <div class="curren">
+                <ul  >																																				<li><a href="#" schoolid="SHANGHAI" subject="ui" class="a_gd a_default" target="_blank"><strong class="class_type1">基</strong>UI设计 基础班<em></em>2016-11-07<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                                                                                <li><a href="#" schoolid="SHANGHAI" subject="ui" class="a_gd a_default" target="_blank"><strong class="class_type1">基</strong>UI设计 基础班<em></em>2016-12-15<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                    </ul>
+               <ul >																		<li><a href="#" schoolid="SHANGHAI" subject="ui" class="a_gd a_default" target="_blank"><strong class="class_type2">就</strong>UI设计 就业班<em></em>2016-10-28<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                        <li><a href="#" schoolid="SHANGHAI" subject="ui" class="a_gd a_default" target="_blank"><strong class="class_type2">就</strong>UI设计 就业班<em></em>2016-11-24<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                        <li><a href="#" schoolid="SHANGHAI" subject="ui" class="a_gd a_default" target="_blank"><strong class="class_type2">就</strong>UI设计 就业班<em></em>2017-01-02<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                            </ul>
+              </div>
+                                <div class="curren">
+                <ul  >																																				<li><a href="#" schoolid="GUANGZHOU" subject="ui" class="a_gd a_default" target="_blank"><strong class="class_type1">基</strong>UI设计 基础班<em></em>2016-12-03<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                    </ul>
+               <ul >																		<li><a href="#" schoolid="GUANGZHOU" subject="ui" class="a_gd a_default" target="_blank"><strong class="class_type2">就</strong>UI设计 就业班<em></em>2016-10-28<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                        <li><a href="#" schoolid="GUANGZHOU" subject="ui" class="a_gd a_default" target="_blank"><strong class="class_type2">就</strong>UI设计 就业班<em></em>2016-12-18<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                            </ul>
+              </div>
+                                <div class="curren">
+                <ul  >																									<li><a href="#" schoolid="SHENZHEN" subject="ui" class="a_gd a_default" target="_blank"><strong class="class_type1">基</strong>UI设计 基础班<em></em>2016-10-25<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                                                                                <li><a href="#" schoolid="SHENZHEN" subject="ui" class="a_gd a_default" target="_blank"><strong class="class_type1">基</strong>UI设计 基础班<em></em>2016-12-20<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                    </ul>
+               <ul >																													<li><a href="#" schoolid="SHENZHEN" subject="ui" class="a_gd a_default" target="_blank"><strong class="class_type2">就</strong>UI设计 就业班<em></em>2016-11-09<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                        <li><a href="#" schoolid="SHENZHEN" subject="ui" class="a_gd a_default" target="_blank"><strong class="class_type2">就</strong>UI设计 就业班<em></em>2017-01-04<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                            </ul>
+              </div>
+                                <div class="curren">
+                <ul  >																									<li><a href="#" schoolid="WUHAN" subject="ui" class="a_gd a_default" target="_blank"><strong class="class_type1">基</strong>UI设计 基础班<em></em>2016-11-07<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                                                                                <li><a href="#" schoolid="WUHAN" subject="ui" class="a_gd a_default" target="_blank"><strong class="class_type1">基</strong>UI设计 基础班<em></em>2016-12-26<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                    </ul>
+               <ul >																													<li><a href="#" schoolid="WUHAN" subject="ui" class="a_gd a_default" target="_blank"><strong class="class_type2">就</strong>UI设计 就业班<em></em>2016-11-25<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                        <li><a href="#" schoolid="WUHAN" subject="ui" class="a_gd a_default" target="_blank"><strong class="class_type2">就</strong>UI设计 就业班<em></em>2017-01-15<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                            </ul>
+              </div>
+                                <div class="curren">
+                <ul  >																									<li><a href="#" schoolid="ZHENGZHOU" subject="ui" class="a_gd a_default" target="_blank"><strong class="class_type1">基</strong>UI设计 基础班<em></em>2016-12-05<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                    </ul>
+               <ul >																													<li><a href="#" schoolid="ZHENGZHOU" subject="ui" class="a_gd a_default" target="_blank"><strong class="class_type2">就</strong>UI设计 就业班<em></em>2016-12-21<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                            </ul>
+              </div>
+                                <div class="curren">
+                <ul  >																									<li><a href="#" schoolid="XIAN" subject="ui" class="a_gd a_default" target="_blank"><strong class="class_type1">基</strong>UI设计 基础班<em></em>2016-11-22<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                    </ul>
+               <ul >																													<li><a href="#" schoolid="XIAN" subject="ui" class="a_gd a_default" target="_blank"><strong class="class_type2">就</strong>UI设计 就业班<em></em>2016-12-08<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                            </ul>
+              </div>
+                                <div class="curren">
+                <ul  >					 <li> 该校区尚未开设基础班课程，敬请期待！</li>
+              </ul>
+               <ul >					 <li> 该校区尚未开设就业班课程，敬请期待！</li>
+              </ul>
+              </div>
+                                <div class="curren">
+                <ul  >					 <li> 该校区尚未开设基础班课程，敬请期待！</li>
+              </ul>
+               <ul >					 <li> 该校区尚未开设就业班课程，敬请期待！</li>
+              </ul>
+              </div>
+                                <div class="curren">
+                <ul  >					 <li> 该校区尚未开设基础班课程，敬请期待！</li>
+              </ul>
+               <ul >					 <li> 该校区尚未开设就业班课程，敬请期待！</li>
+              </ul>
+              </div>
+                                <div class="curren">
+                <ul  >					 <li> 该校区尚未开设基础班课程，敬请期待！</li>
+              </ul>
+               <ul >					 <li> 该校区尚未开设就业班课程，敬请期待！</li>
+              </ul>
+              </div>
+                                <div class="curren">
+                <ul  >					 <li> 该校区尚未开设基础班课程，敬请期待！</li>
+              </ul>
+               <ul >					 <li> 该校区尚未开设就业班课程，敬请期待！</li>
+              </ul>
+              </div>
+                                <div class="curren">
+                <ul  >																									<li><a href="#" schoolid="HANGZHOU" subject="ui" class="a_gd a_default" target="_blank"><strong class="class_type1">基</strong>UI设计 基础班<em></em>2016-10-28<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                                                                                                    </ul>
+               <ul >																													<li><a href="#" schoolid="HANGZHOU" subject="ui" class="a_gd a_default" target="_blank"><strong class="class_type2">就</strong>UI设计 就业班<em></em>2016-11-13<em></em><span class='ocp_processing'>火爆报名中</span></a></li>
+                                                            </ul>
+              </div>
+                                <div class="curren">
+                <ul  >					 <li> 该校区尚未开设基础班课程，敬请期待！</li>
+              </ul>
+               <ul >					 <li> 该校区尚未开设就业班课程，敬请期待！</li>
+              </ul>
+              </div>
+                                <div class="curren">
+                <ul  >					 <li> 该校区尚未开设基础班课程，敬请期待！</li>
+              </ul>
+               <ul >					 <li> 该校区尚未开设就业班课程，敬请期待！</li>
+              </ul>
+              </div>
+            </div>
+        </div>
+        <p class="clear clear_s"></p>								
+    </div>
+</div>
+<!-- 灰色背景区域 E -->
+    
+<!-- 白色背景区域 S -->
+<div class="whitebg fdhide">		
+    <p class="clear clear_s"></p>
+    <!-- 社区本周精华 S -->
+    <div class="lay lay_same">
+        <!--标题 -->
+        <div class="hd">
+            <h2 class="hd_tt">社区本周精华</h2>
+            <div class="hd_rr">
+                <ul>
+                    <li class="cur"><a href="http://bbs.itcast.cn/forum-228-1.html" style="color:inherit;" target="_blank">开班报道</a></li>
+                    <li><a href="http://bbs.itcast.cn/forum-232-1.html" style="color:inherit;" target="_blank">学员故事</a></li>
+                    <li><a href="http://bbs.itcast.cn/forum-231-1.html" style="color:inherit;" target="_blank">活动专区</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!--内容 -->
+        <ul class="bd">
+        	<li style="display:block;"><img src="images/1.png" /></li>
+            <li><img src="images/2.png" /></li>
+            <li><img src="images/3.png" /></li>
+        </ul>
+    </div>
+    <!-- 社区本周精华 E -->
+</div>
+<!-- 白色背景区域 E -->
+    
+<!-- 传智保障 S -->
+<div class="boxbz">
+    <!-- 底部五大保障 -->
+    <div class="inner">
+        <ul>
+        <li><a class="a_gd a_default" href="http://v.itcast.cn" target="_blank"><i class="iconfont"></i> <span>免费分享视频教程</span> </a></li>
+        <li><a class="a_gd a_default" href="/course.shtml" target="_blank"><i class="iconfont"></i> <span>每年更新课程体系</span> </a></li>
+        <li><a class="a_gd a_default" href="http://bbs.itcast.cn/forum-231-1.html" target="_blank"><i class="iconfont"></i> <span>定期举办技术沙龙</span> </a></li>
+        <li><a class="a_gd a_default" href="http://bbs.itcast.cn/thread-85684-1-1.html" target="_blank"><i class="iconfont"></i> <span>就业薪资全部公开</span> </a></li>
+        <li style="border-right: 0;"><a class="a_gd a_default" href="http://d.itcast.cn/3" target="_blank"><i class="iconfont"></i> <span>7&times;24小时职业规划</span> </a></li>
+        </ul>
+    </div>
+    <!-- 底部五大保障 -->
+</div>
+<!-- 传智保障 E -->
+<!-- 底部  S -->
+<div class="footer">
+    <!--  底部列表区  -->
+    <div class="foot_ch about">
+<div class="div_list">
+<h3>关于我们</h3>
+<ul>
+<li><a class="a_gd" href="/channel/about/about.shtml" target="_blank">传智简介</a></li>
+<li><a class="a_gd" href="/subject/zhaopin/index.shtml" target="_blank">加入传智</a></li>
+</ul>
+</div>
+<div class="div_list">
+<h3>旗下品牌</h3>
+<ul>
+<li><a class="a_gd" href="http://www.itheima.com/">黑马程序员</a></li>
+<li><a class="a_gd" href="http://v.itcast.cn/" target="_blank">博学谷</a></li>
+</ul>
+</div>
+<div class="div_list">
+<h3>校区攻略</h3>
+<ul>
+<li><a class="a_gd" href="http://bbs.itcast.cn/thread-85619-1-1.html" target="_blank">校区环境</a></li>
+<li><a class="a_gd" href="http://bbs.itcast.cn/thread-85619-1-1.html" target="_blank">住宿攻略</a></li>
+<li><a class="a_gd" href="http://bbs.itcast.cn/thread-85797-1-1.html" target="_blank">来校路线</a></li>
+</ul>
+</div>
+<div class="div_list">
+<h3>学习资源</h3>
+<ul>
+<li><a class="a_gd" href="http://v.itcast.cn/" target="_blank">视频库</a></li>
+<li><a class="a_gd" href="http://open.itcast.cn" target="_blank">公开课</a></li>
+<li><a class="a_gd" href="http://d.itcast.cn/s" target="_blank">云课堂</a></li>
+</ul>
+</div>
+<div class="div_list">
+<h3>传智故事</h3>
+<ul>
+<li><a class="a_gd" href="http://i.itcast.cn" target="_blank">学员故事</a></li>
+<li><a class="a_gd" href="http://bbs.itcast.cn/forum.php?mod=forumdisplay&amp;fid=239" target="_blank">科技喵喵喵</a></li>
+</ul>
+</div>
+<div class="div_list div_wx">
+<div style="margin-right: 30px"><img src="picture/wx_cz.jpg" />
+<p>传智播客官方微信</p>
+</div>
+<div><img src="picture/wx_hm.jpg" />
+<p>黑马程序员官方微信</p>
+</div>
+</div>
+</div>
+
+    <!--  底部列表区  -->
+    <!--  友情链接区  -->
+    <div class="foot_ch fl">
+<h3>友情链接</h3>
+<div class="lk"><a class="a_gd" href="http://www.itheima.com/" target="_blank">黑马程序员</a> <a class="a_gd" href="http://v.itcast.cn" target="_blank">博学谷</a> <a class="a_gd" href="http://www.51cmo.com" target="_blank">首席营销官</a>&nbsp;<a class="a_gd" href="http://ielts.xdf.cn/" target="_blank">雅思</a> <a class="a_gd" href="http://www.thinkphp.cn" se_prerender_url="complete" target="_blank">ThinkPHP框架</a> <a class="a_gd" href="http://www.lenosoft.net/" target="_blank">进销存软件</a> <a class="a_gd" href="http://www.eduego.com/" target="_blank">在职研究生</a> <a class="a_gd" href="http://www.bdkssc.com/" target="_blank">职称计算机考试</a> <a class="a_gd" href="http://wh.fang.anjuke.com/" target="_blank">武汉房产网</a> <a class="a_gd" href="http://jiaoyu.huangye88.com/" target="_blank">中国教育网</a> <a class="a_gd" href="http://www.21shipin.com/" target="_blank">视频教程网</a>&nbsp;<a href="http://www.gocheck.cn/" target="_blank">论文查重</a> <a class="a_gd" href="http://www.tingke8.com/" target="_blank">听课网</a> <a class="a_gd" href="http://www.1ppt.com" target="_blank">PPT模板</a> <a class="a_gd" href="http://qiuzhixin.yjbys.com/" target="_blank">求职信</a> <a class="a_gd" href="http://bbs.hh010.com" target="_blank">CCNA</a> <a class="a_gd" href="http://www.52ij.com/" target="_blank">我爱IT技术网</a> <a class="a_gd" href="http://www.chinacloud.cn/" target="_blank">云计算</a> <a class="a_gd" href="http://www.anystandards.com/" target="_blank">标准下载</a> <a class="a_gd" href="http://www.zhaoxi.net/" target="_blank">图片制作</a><a class="a_gd" href="http://www.wnwb.com" target="_blank">五笔输入法下载</a> <a href="http://www.zzyjs.com/" target="_blank">中国在职研究生网</a><a class="a_gd" href="http://www.pp3.cn/" target="_blank">电脑主题</a><a href="http://www.logo123.net" target="_blank">123标志设计网</a> <a class="a_gd" href="http://language.koolearn.com/" target="_blank">新东方小语种</a><a class="a_gd" href="http://www.java1234.com/" target="_blank">java1234</a><a href="http://www.jiangshi99.com/" target="_blank">培训师</a> <a class="a_gd" href="http://www.coolsc.net" target="_blank">酷素材</a> <a class="a_gd" href="http://www.3dfrom.com" target="_blank">3d模型下载</a> <a href="http://www.ushendu.com">u盘启动盘制作工具</a> <a href="http://wpa.qq.com/msgrd?V=1&amp;uin=2335120740&amp;Site=传智播客&amp;Menu=yes" target="_blank">申请传智播客友链</a></div>
+</div>
+<br />
+
+    <!--  友情链接区  -->
+<!--  底部版权区  -->
+<div class="foot_ch add">
+<h2><img alt="传智播客" src="picture/logo.png" width="145" /></h2>
+<p>版权所有 2006 - 2016 北京传智播客教育科技有限公司&nbsp;&nbsp;&nbsp;地址：北京市昌平区建材城西路金燕龙办公楼一层&nbsp;&nbsp;&nbsp;邮编：100096<br />
+电话：010-82935150/60/70&nbsp;&nbsp;&nbsp;邮箱: zhanghj@itcast.cn&nbsp;&nbsp;&nbsp;京ICP备08001421号&nbsp;&nbsp;&nbsp;京公网安备110108007702</p>
+<ul>
+    <li><a href="http://webscan.360.cn/index/checkwebsite/url/www.itcast.cn" target="_blank"><img src="picture/360.jpg" /></a></li>
+    <li><a href="http://t.knet.cn/index_new.jsp" target="_blank"><img src="picture/chengxin.jpg" /></a></li>
+    <li><a href="http://www.bj.cyberpolice.cn/index.do" target="_blank"><img src="picture/safe.jpg" /></a></li>
+</ul>
+</div>
+<br />
+<!--  底部版权区  -->
+</div>
+<!-- 底部  E -->
+
+</body>
+</html>

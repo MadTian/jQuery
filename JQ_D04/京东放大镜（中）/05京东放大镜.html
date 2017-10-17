@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            list-style: none;
+        }
+        .container{
+            width: 350px;
+            height: 350px;
+            border: 1px solid #ccc;
+            margin: 100px 0 0 100px;
+            position: relative;
+        }
+        .magnifier{
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: rgba(254,222,79, 0.5);
+            display: none;
+            /*将鼠标形状设置成拖拽句柄*/
+            cursor: move;
+        }
+        .rightBox{
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            top: -1px;
+            left: 500px;
+            border: 1px solid #ccc;
+            overflow: hidden;
+            display: none;
+        }
+    </style>
+    <script type="text/javascript" src="jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            
+            var oContainer=$('.container');
+            var oMagnifier=$('.magnifier');
+            var oRightBox=$('.rightBox');
+
+            oContainer.mouseenter(function(event) {
+                
+                //鼠标移入时，让放大镜和右侧盒子显示
+                oMagnifier.show();
+                oRightBox.show();
+
+            }).mouseleave(function(event) {
+
+                //鼠标离开时，让放大镜和右侧盒子隐藏
+                oMagnifier.hide();
+                oRightBox.hide();
+
+            }).mousemove(function(event) {
+                
+                //1.让放大镜跟随鼠标移动
+
+                // 1.1 获取鼠标的运行轨迹
+                // 减100是因为 pageX返回的是鼠标相对于HTML轴的，不能直接使用，要减去margin
+                // 减1是因为 存在1像素 的边框
+                // 减75是因为 想要让鼠标落在放大镜最中间，所以减去放大镜宽和高的一半
+                var x=event.pageX-100-1-75;
+                var y=event.pageY-100-1-75;
+
+                if(x<0){
+                    x=0;
+                }
+                if(x>200){
+                    x=200;
+                }
+                if(y<0){
+                    y=0;
+                }
+                if(y>200){
+                    y=200;
+                }
+
+
+                // 1.2 将处理后的x y和放大镜的left top做同步
+                oMagnifier.css({
+                    'left': x,
+                    'top': y
+                });
+
+
+
+                //2.让右侧大图跟随放大镜移动
+
+            });
+
+
+
+
+        });
+    </script>
+</head>
+<body>
+    
+    <div class="container">
+        
+        <img src="images/small.jpg" height="350" width="350" />
+
+        <!-- 放大镜 -->
+        <div class="magnifier"></div>
+        
+        <!-- 右侧大图片容器 -->
+        <div class="rightBox">
+            <img src="images/big.jpg" height="800" width="800" />
+        </div>
+
+    </div>
+
+
+
+</body>
+</html>

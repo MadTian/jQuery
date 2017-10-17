@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Document</title>
+    <style type="text/css">
+        .box{
+            width: 300px;
+            height: 300px;
+            border: 1px solid #ccc;
+            background-color: pink;
+            margin: 100px 0 0 100px;
+        }        
+    </style>
+    <script type="text/javascript" src="jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        $('.box').mousemove(function(event) {
+            var x=event.pageX;
+            var y=event.pageY;
+            $(this).html(x+'px,'+y+'px');
+        });
+    });
+    </script>
+</head>
+<body>
+    <div class="box">100px,100px</div>
+</body>
+</html>

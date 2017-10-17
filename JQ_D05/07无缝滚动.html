@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            list-style: none;
+        }
+        .view{
+            width: 600px;
+            height: 200px;
+            margin: 100px auto 0;
+            border: 5px solid #000;
+            overflow: hidden;
+            background-color: #000;
+        }
+        .list{
+            width: 5000px;
+            height: 200px;
+        }
+        .list li{
+            width: 300px;
+            height: 200px;
+            float: left;
+        }
+    </style>
+    <script type="text/javascript" src="jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            
+            var timer;
+
+            //设置一个变量，用来模拟不断改变的margin-left，用于UL做位移
+            var myMarginLeft=0;
+            var oList=$('.list');
+            var oView=$('.view');
+            var aLi=$('.list li');
+
+            function move(){
+
+                //让模拟变量做递减
+                myMarginLeft=myMarginLeft-3;
+                //滚动的过程，如果出现留白，就将整个LIST拉回原点
+                if(myMarginLeft<-1200){
+
+                    myMarginLeft=0;
+
+                }
+                oList.css('margin-left', myMarginLeft);
+
+            }
+
+            timer=setInterval(move, 30);
+
+            oView.hover(function() {
+
+                clearInterval(timer);
+
+            }, function() {
+                
+                //为了防止出现定时器的积累，对旧的做一次清空
+                clearInterval(timer);
+                //重启定时器
+                timer=setInterval(move, 30);
+                
+
+            });
+
+            aLi.hover(function() {
+                
+                //为了拓展性
+                //一上来，就将当前这个LI的透明度变成1
+                $(this).stop().fadeTo(500,1);
+
+                //让当前这个LI的小伙伴们透明度降下来
+                $(this).siblings('li').stop().fadeTo(500,0.3);
+
+            }, function() {
+                
+                //鼠标离开时，让所有的LI透明度统统还原成1
+                aLi.stop().fadeTo(500,1);
+
+            });
+
+        });
+    </script>
+</head>
+<body>
+    
+    <div class="view">
+        <ul class="list">
+            <li><a href="javascript:;"><img src="images/luoLi/01.jpg" height="200" width="300" /></a></li>
+            <li><a href="javascript:;"><img src="images/luoLi/02.jpg" height="200" width="300" /></a></li>
+            <li><a href="javascript:;"><img src="images/luoLi/03.jpg" height="200" width="300" /></a></li>
+            <li><a href="javascript:;"><img src="images/luoLi/04.jpg" height="200" width="300" /></a></li>
+            <!-- 根据视口的大小复制不同数量的图片到列表的最后面 -->
+            <!-- 人为复制的LI，称之为临时工 -->
+            <li><a href="javascript:;"><img src="images/luoLi/01.jpg" height="200" width="300" /></a></li>
+            <li><a href="javascript:;"><img src="images/luoLi/02.jpg" height="200" width="300" /></a></li>
+        </ul>
+    </div>
+
+
+</body>
+</html>
